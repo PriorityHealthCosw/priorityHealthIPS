@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://desarrollo.is.escuelaing.edu.co:3306/cosw2?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">cosw2</property>
+    <property name="hibernate.connection.password">cosw2gr22</property>
+    <mapping class="edu.eci.cosw.mappers.Inventario"/>
+    <mapping class="edu.eci.cosw.mappers.DetallePedido"/>
+    <mapping class="edu.eci.cosw.mappers.Factura"/>
+    <mapping class="edu.eci.cosw.mappers.Contrato"/>
+    <mapping class="edu.eci.cosw.mappers.OrdenCompra"/>
+    <mapping class="edu.eci.cosw.mappers.Devolucion"/>
+    <mapping class="edu.eci.cosw.mappers.HibernateAwareObjectMapper"/>
+    <mapping class="edu.eci.cosw.mappers.DetalleOrdenCompra"/>
+    <mapping class="edu.eci.cosw.mappers.MedicamentoPorProveedor"/>
+    <mapping class="edu.eci.cosw.mappers.DetalleInventario"/>
+    <mapping class="edu.eci.cosw.mappers.Proveedor"/>
+    <mapping class="edu.eci.cosw.mappers.Despacho"/>
+    <mapping class="edu.eci.cosw.mappers.Pedido"/>
+    <mapping class="edu.eci.cosw.mappers.Autorizacion"/>
+    <mapping class="edu.eci.cosw.mappers.Cotizacion"/>
+    <mapping class="edu.eci.cosw.mappers.Mensajero"/>
+    <mapping class="edu.eci.cosw.mappers.Medicamento"/>
+    <mapping class="edu.eci.cosw.mappers.Epsafilida"/>
+    <mapping class="edu.eci.cosw.mappers.ItemDeFactura"/>
+    <mapping class="edu.eci.cosw.mappers.Paciente"/>
+  </session-factory>
+</hibernate-configuration>
