@@ -1,4 +1,4 @@
-package edu.eci.cosw.mappers;
+package edu.eci.cosw.model;
 // Generated 9/10/2015 03:08:07 PM by Hibernate Tools 4.3.1
 
 
