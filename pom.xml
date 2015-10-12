@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.eci.cosw</groupId>
-    <artifactId>spring-data-rest-api</artifactId>
+    <artifactId>Priority_Healt</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
