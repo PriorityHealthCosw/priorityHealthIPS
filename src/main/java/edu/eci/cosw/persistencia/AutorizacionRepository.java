@@ -5,6 +5,8 @@
  */
 package edu.eci.cosw.persistencia;
 import edu.eci.cosw.model.Autorizacion;
+import java.util.List;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -12,5 +14,6 @@ import org.springframework.data.repository.CrudRepository;
  * @author Usuario
  */
 public interface AutorizacionRepository  extends CrudRepository<Autorizacion, Integer>{
-    
+     @Query("FROM Autorizaciones")
+    public List<Autorizacion> CargarAutorizaciones();
 }

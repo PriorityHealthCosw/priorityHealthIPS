@@ -5,7 +5,10 @@
  */
 package edu.eci.cosw.logica;
 
+import edu.eci.cosw.model.Autorizacion;
+import edu.eci.cosw.model.Pedido;
 import edu.eci.cosw.persistencia.*;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,4 +30,13 @@ public class ClaseLogica {
     PacienteRepository par;
     @Autowired
     PedidoRepository per;
+
+    public List<Autorizacion> cargarAutorizaciones() {
+        return ar.CargarAutorizaciones();
+    }
+    
+    public Pedido consultarPedido(int id) {
+        Pedido p=per.findOne(id);
+        return p;
+    }
 }
