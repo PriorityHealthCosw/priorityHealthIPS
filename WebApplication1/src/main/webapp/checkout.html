@@ -1,4 +1,4 @@
-<div ng-controller="skcontroller">
+<div ng-controller="loginController">
     <h1> Carro de compras </h1>
     <h2> Productos  seleccionados:</h2>
     <table class="table table-striped">
@@ -9,9 +9,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="prod in selectedPedidos"  >
+            <tr ng-repeat="prod in selectedPacientes"  >
                             
-                                <td>{{ prod.idPedidos}}</td>
+                                <td>{{ prod.idPacientes}}</td>
                                 <td>{{ prod.direccion}}</td>
                             
                         </tr>

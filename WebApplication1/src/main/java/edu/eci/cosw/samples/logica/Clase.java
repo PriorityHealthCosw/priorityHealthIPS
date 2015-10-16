@@ -7,9 +7,11 @@ package edu.eci.cosw.samples.logica;
 
 import edu.eci.cosw.samples.model.Medicamento;
 import edu.eci.cosw.samples.model.MedicamentoPorProveedor;
+import edu.eci.cosw.samples.model.Paciente;
 import edu.eci.cosw.samples.model.Pedido;
 import edu.eci.cosw.samples.persistencia.MedicamentoPPRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoRepository;
+import edu.eci.cosw.samples.persistencia.PacientesRepository;
 import edu.eci.cosw.samples.persistencia.PedidosRepository;
 import java.util.ArrayList;
 import java.util.Date;
@@ -34,7 +36,8 @@ public class Clase {
     MedicamentoPPRepository mppr;
     @Autowired
     MedicamentoRepository mr;
-    
+    @Autowired
+    PacientesRepository par;
     public Pedido consultarPedido(int id) {
         Pedido p= pr.findOne(id);
         return p;
@@ -63,5 +66,15 @@ public class Clase {
     public Iterable<Medicamento> consultarMedicamentos() {
         Iterable<Medicamento> mp = mr.findAll();
         return mp;
+    }
+
+    public Paciente consultarPaciente(int id) {
+        Paciente p=par.findOne(id);
+        return p;
+    }
+    
+    public Iterable<Paciente> consultarPacientes() {
+        Iterable<Paciente> p = par.findAll();
+        return p;
     }
 }

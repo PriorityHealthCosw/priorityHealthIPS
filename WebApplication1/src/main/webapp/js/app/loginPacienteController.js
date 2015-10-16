@@ -1,20 +1,30 @@
 (function () {
-    var app = angular.module('LoginPaciente', ['ngRoute', 'LoginServices']);
+    var app = angular.module('LoginPaciente', ['ngRoute', 'PacienteServices']);
 
     app.config(function ($routeProvider) {
         $routeProvider
                 .when('/index', {
                     templateUrl: 'index.html'
                 })
-                .when('/realizarPedido', {
-                    templateUrl: 'realizarPedido.html'
+                .when('/loginPaciente', {
+                    templateUrl: 'loginPaciente.html'
                 })
                 .when('/Autorizacion', {
                     templateUrl: 'consultarAutorizacion.html'
                 })
                 .when('/consultardespacho', {
                     templateUrl: 'consultarDespacho.html'
-                });
+                }).when('/new', {
+                    templateUrl: 'seleccion.html'
+                })
+                .when('/list', {
+                    templateUrl: 'checkout.html'
+                })
+                .when('/home', {
+                    templateUrl: 'home.html'
+                })
+                ;
+                
     });
 
 
@@ -26,7 +36,7 @@
 
         $scope.selectedPacientesId = -1;
 
-        $scope.selectedPacientesDetail = null;
+        $scope.selectedPacienteDetail = null;
 
         $scope.total = PacientesRestAPI.calculateShoppingKartCost($scope.selectedPacientes);
         
@@ -43,7 +53,7 @@
             //promise success
             function (response) {
                 console.log(response.data);
-                $scope.availablePacientes = response.data;
+                $scope.pacientes = response.data;
             },
             //promise error
                     function (response) {
@@ -81,7 +91,7 @@
 
                 $timeout(function () {
                 var response;
-                UserService.GetByUsername(username)
+               UserService.GetByUsername(username)
                     .then(function (user) {
                         if (user !== null && user.password === password) {
                             response = { success: true };

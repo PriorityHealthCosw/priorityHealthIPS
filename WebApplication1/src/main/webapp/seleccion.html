@@ -1,5 +1,5 @@
-<div ng-controller="skcontroller">
-    <h1> Selección de productos </h1>
+<div ng-controller="loginController ">
+    <h1> Selección de clientes </h1>
 
 
     <div class="container">
@@ -10,14 +10,14 @@
                 <table class="table table-striped" style="cursor: pointer;">
                     <thead>
                         <tr>
-                            <th>Identificacion del pedido</th>
+                            <th>Identificacion del cliente</th>
                             <th>Direccion</th>                            
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="prod in availablePedidos" ng-click="setSelectedPedido(prod.idPedidos)" >
+                        <tr ng-repeat="prod in pacientes" ng-click="setSelectedPaciente(prod.idPacientes)" >
                             
-                                <td>{{ prod.idPedidos}}</td>
+                                <td>{{ prod.idPacientes}}</td>
                                 <td>{{ prod.direccion}}</td>
                             
                         </tr>
@@ -25,13 +25,13 @@
                 </table>
 
             </div>
-            <div class="col-sm-6" style="background-color:lavenderblush;" ng-if="selectedPedidoId!=-1">
+            <div class="col-sm-6" style="background-color:lavenderblush;" ng-if="selectedPacienteId!=-1">
 
 
                 
-                <button value="OK" ng-click="addToSelectedPedidos()">Agregar al carro de compras.</button>
+                <button value="OK" ng-click="addToSelectedPacientes()">Agregar al carro de compras.</button>
                 <br><br>
-                {{selectedPedidoDetail}}
+                {{selectedPacienteDetail}}
                 
             </div>
     

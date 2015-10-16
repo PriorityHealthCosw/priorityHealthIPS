@@ -2,6 +2,12 @@
 <html lang="en">
 <head>
     <title></title>
+    
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/libs/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="js/app/clienteservices.js"></script>
+    <script src="js/app/loginPacienteController.js"></script>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
@@ -44,8 +50,8 @@
         <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
 	<![endif]-->
 </head>
-<body id="page1">
-	<div class="extra">
+<body id="page1"  ng-app="LoginPaciente">
+	<div class="extra"  ng-controller="loginController">
     	<!--==============================header=================================-->
         <header>
         	<div class="row-top">
@@ -60,11 +66,14 @@
             	<div class="menu-bg">
                     <div class="main">
                         <nav class="indent-left">
-                            <ul class="menu wrapper">
+                            <div class="container">
+                            <ul class="menu wrapper nav navbar-nav navbar-right">
                                 <li class="active"><a href="index.html">Inicio</a></li>
-                                <li><a href="loginPaciente.html">Paciente</a></li>
-                                <li><a href="loginEmpleado.html">Empleado</a></li>
+                                <li><a href="#loginPaciente"><i class="fa fa-shield"></i> Paciente</a></li>
+                                <li><a href="#list"><i class="fa fa-comment"></i> Empleado</a></li>
+                          
                             </ul>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -86,10 +95,7 @@
     				</div>
                 </div>
             </div>
-        </header>
-        
-        <!--==============================content================================-->
-        <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. December10, 2011!</div>
+            <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. December10, 2011!</div>
             <div class="main">
                 <div class="zerogrid">
                     <div class="wrapper row">
@@ -193,6 +199,16 @@
             </div>
             <div class="block"></div>
         </section>
+        </header>
+         <div id="main">
+
+                
+               <div ng-view></div>
+
+            </div>
+        
+        <!--==============================content================================-->
+        
     </div>
 	
 	<!--==============================footer=================================-->
