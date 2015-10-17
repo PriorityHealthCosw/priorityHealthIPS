@@ -34,6 +34,7 @@
 </head>
 
 <body id="page4">
+    <div ng-controller="skcontroller">
 	<div class="extra">
     	<!--==============================header=================================-->
         <header>
@@ -83,12 +84,14 @@
                                     </div>
                                 </form>
                                 <div class="wrapper p3"></div>          
-                                <button type="button" class="btn btn-primary">Aceptar</button>
+                                    <button onclick="validarNumeroRegisto()" type="button" class="btn btn-primary">Aceptar</button>
                                <div class="wrapper p3"></div>
-                              
+                               
+                               <!--div class="col-sm-6" style="background-color:lavenderblush;" ng-if=""-->
+             
                                 <div> 
                                     
-                                    <table class="table table-bordered">
+                                    <table class="table table-striped">
                                       <thead>
                                         <tr>
                                           <th>Numero</th>
@@ -120,7 +123,7 @@
                                       </tbody>
                                     </table>
                                 </div>
-                                
+                               </div> 
                             </article>
                         </div>
                     </div>
@@ -144,5 +147,6 @@
         </div>
     </footer>
 	<script type="text/javascript"> Cufon.now(); </script>
+    </div>
 </body>
 </html>

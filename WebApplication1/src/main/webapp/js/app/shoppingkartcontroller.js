@@ -1,6 +1,6 @@
 (function () {
     var app = angular.module('ShoppingKart', ['ngRoute', 'PedidoServices']);
-
+            
     app.config(function ($routeProvider) {
         $routeProvider
                 .when('/new', {
@@ -31,6 +31,8 @@
         $scope.total = PedidosRestAPI.calculateShoppingKartCost($scope.selectedPedidos);
         
         $scope.availablePedidosRequestPromise = PedidosRestAPI.pedidosRequestPromise();
+        
+        
 
         $scope.addToSelectedPedidos = function () {
             //$scope.selectedProducts.push($scope.selectedProductDetail);
@@ -74,7 +76,10 @@
 
             };
 
-
+         /* Validacion numero de registro*/
+     $scope.validarNumeroRegisto = function() {
+             alert("El numero no se encuentra Registrado");
+        };
     });
     
     app.factory('PedidosSelectionFactory', function () {
@@ -92,7 +97,7 @@
         };
     });
     
-    
+   
 
 })();
 
