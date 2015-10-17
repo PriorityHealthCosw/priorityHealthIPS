@@ -59,7 +59,7 @@ public class Paciente  implements java.io.Serializable {
         this.idPacientes = idPacientes;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="EPSAfilidas_idEPS", nullable=false)
     public Epsafilida getEpsafilidas() {
         return this.epsafilidas;
