@@ -68,7 +68,7 @@
                     function (response) {
 
                         console.log('viene con id: '+ $scope.selectedPacienteId);
-                        console.log('Unable to get data from REST API:' + response);
+                        console.log('Unable tdo get data from REST API:' + response);
                     }
                 );
 
@@ -76,6 +76,7 @@
             
             $scope.login = function (username, password, callback) {
                 $scope.selectedPacienteId = idpac;
+
 
 
                 $timeout(function () {
