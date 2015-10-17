@@ -28,7 +28,11 @@
    		<script type="text/javascript" src="js/html5.js"></script>
         <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
 	<![endif]-->
+    
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body id="page4">
 	<div class="extra">
     	<!--==============================header=================================-->
@@ -36,7 +40,7 @@
         	<div class="row-top">
             	<div class="main">
                 	<div class="wrapper">
-                    	<h1><a href="index.html">Consulting</a></h1>
+                    	<h1><a href="index.html">Consultar Autorizacion</a></h1>
                        
                     </div>
                 </div>
@@ -49,7 +53,7 @@
                                 <li><a href="index.html">Inicio</a></li>
                                 <li><a href="loginPaciente.html">Paciente</a></li>
                                 <li><a href="realizarPedido.html">Realizar Pedido</a></li>
-                                <li class="active"><a href="consultarAutorizacion.html">Consultar Autorizacion</a></li>
+                                <li class="active"><a href="consultarAutorizacion.html">Consultar Autorizacio</a></li>
                                 <li><a href="consultarDespacho.html">Consultar Despacho</a></li>
                             </ul>
                         </nav>
@@ -69,77 +73,54 @@
                     <div class="zerogrid">
                         <div class="wrapper">
                             <article class="col-full">
-                            	<h3>Consulta Autorizaciones</h3>
-                                <div class="wrapper p3">
-                                	<article class="col-1-3">
-										<div class="wrap-col">
-                                    	<h4 class="p2">Project 1</h4>
-                                        <figure><a href="#"><img class="img-border" src="images/page4-img1.jpg" alt="" /></a></figure>
-                                        <div class="box">
-                                        	<div class="padding">
-                                            	<a href="#">Read more</a>
-                                            </div>
-                                        </div>
-										</div>
-                                    </article>
-                                    <article class="col-1-3">
-										<div class="wrap-col">                                  	
-                                            <h4 class="p2">Project 2</h4>
-                                            <figure><a href="#"><img class="img-border" src="images/page4-img2.jpg" alt="" /></a></figure>
-                                            <div class="box">
-                                                <div class="padding">
-                                                    <a href="#">Read more</a>
-                                                </div>
-                                            </div>                      
-										</div>
-                                    </article>
-                                    <article class="col-1-3">
-                                    	<div class="wrap-col">
-                                            <h4 class="p2">Project 3</h4>
-                                            <figure><a href="#"><img class="img-border" src="images/page4-img3.jpg" alt="" /></a></figure>
-                                            <div class="box">
-                                                <div class="padding">
-                                                    <a href="#">Read more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
+                            	<h3>Consultar Autorizaciones</h3>
+                                <div class="wrapper p3"></div>
+                              
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="exampleInputName2"><h5>Ingresar Numero de Registro:</h5></label>
+                                        <input type="text" class="form-control" id="formGroupInputLarge" placeholder="Numero">
+                                    </div>
+                                </form>
+                                <div class="wrapper p3"></div>          
+                                <button type="button" class="btn btn-primary">Aceptar</button>
+                               <div class="wrapper p3"></div>
+                              
+                                <div> 
+                                    
+                                    <table class="table table-bordered">
+                                      <thead>
+                                        <tr>
+                                          <th>Numero</th>
+                                          <th>Estado</th>
+                                          <th>Numero Medicamento</th>
+                                          <th>Nombre Medicamento</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>123015</td>
+                                          <td>Estudio</td>
+                                          <td>4523</td>
+                                          <td>omeprazol</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                          <td>45231</td>
+                                          <td>Aceptada</td>
+                                          <td>5236</td>
+                                          <td>Cefalexina</td>
+                                        </tr>
+                                        <tr>
+                                          <td>45213</td>
+                                          <td>Rechazado</td>
+                                          <td>4589</td>
+                                          <td>Piperecina</td>
+                                       
+                                      </tbody>
+                                    </table>
                                 </div>
-                                <div class="wrapper">
-                                	<article class="col-1-3">
-										<div class="wrap-col">
-                                    	<h4 class="p2">Project 4</h4>
-                                        <figure><a href="#"><img class="img-border" src="images/page4-img4.jpg" alt="" /></a></figure>
-                                        <div class="box">
-                                        	<div class="padding">
-                                            	<a href="#">Read more</a>
-                                            </div>
-                                        </div>
-										</div>
-                                    </article>
-                                    <article class="col-1-3">
-                                    	<div class="wrap-col">
-                                            <h4 class="p2">Project 5</h4>
-                                            <figure><a href="#"><img class="img-border" src="images/page4-img5.jpg" alt="" /></a></figure>
-                                            <div class="box">
-                                                <div class="padding">
-                                                    <a href="#">Read more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="col-1-3">
-                                    	<div class="wrap-col">
-                                            <h4 class="p2">Project 6</h4>
-                                            <figure><a href="#"><img class="img-border" src="images/page4-img6.jpg" alt="" /></a></figure>
-                                            <div class="box">
-                                                <div class="padding">
-                                                    <a href="#">Read more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
+                                
                             </article>
                         </div>
                     </div>
