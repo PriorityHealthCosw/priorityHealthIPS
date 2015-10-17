@@ -5,23 +5,21 @@
  */
 package edu.eci.cosw.samples.logica;
 
+import edu.eci.cosw.samples.model.Autorizacion;
+import edu.eci.cosw.samples.model.Epsafilida;
 import edu.eci.cosw.samples.model.Medicamento;
 import edu.eci.cosw.samples.model.MedicamentoPorProveedor;
 import edu.eci.cosw.samples.model.Paciente;
 import edu.eci.cosw.samples.model.Pedido;
+import edu.eci.cosw.samples.persistencia.AutorizacionRepository;
+import edu.eci.cosw.samples.persistencia.EpsafilidaRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoPPRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoRepository;
 import edu.eci.cosw.samples.persistencia.PacientesRepository;
 import edu.eci.cosw.samples.persistencia.PedidosRepository;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -38,6 +36,11 @@ public class Clase {
     MedicamentoRepository mr;
     @Autowired
     PacientesRepository par;
+    @Autowired
+    EpsafilidaRepository epsr;
+    @Autowired
+    AutorizacionRepository ar;
+    
     public Pedido consultarPedido(int id) {
         Pedido p= pr.findOne(id);
         return p;
@@ -76,5 +79,25 @@ public class Clase {
     public Iterable<Paciente> consultarPacientes() {
         Iterable<Paciente> p = par.findAll();
         return p;
+    }
+
+    public Epsafilida consultarEpsafilida(int id) {
+        Epsafilida eps=epsr.findOne(id);
+        return eps;
+    }
+    
+    public Iterable<Epsafilida> consultarEpsafilidas() {
+        Iterable<Epsafilida> eps = epsr.findAll();
+        return eps;
+    }
+    
+    public Autorizacion consultarAutorizacion(int id) {
+        Autorizacion au=ar.findOne(id);
+        return au;
+    }
+    
+    public Iterable<Autorizacion> consultarAutorizaciones() {
+        Iterable<Autorizacion> au = ar.findAll();
+        return au;
     }
 }
