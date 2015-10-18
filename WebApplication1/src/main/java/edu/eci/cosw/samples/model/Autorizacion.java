@@ -34,7 +34,6 @@ public class Autorizacion  implements java.io.Serializable {
      private Date fechaExpedicion;
      private Date fechaVencimiento;
      private String estado;
-     private Set<Medicamento> medicamentoses = new HashSet<Medicamento>(0);
 
     public Autorizacion() {
     }
@@ -43,12 +42,11 @@ public class Autorizacion  implements java.io.Serializable {
     public Autorizacion(Epsafilida epsafilidas) {
         this.epsafilidas = epsafilidas;
     }
-    public Autorizacion(Epsafilida epsafilidas, Date fechaExpedicion, Date fechaVencimiento, String estado, Set<Medicamento> medicamentoses) {
+    public Autorizacion(Epsafilida epsafilidas, Date fechaExpedicion, Date fechaVencimiento, String estado) {
        this.epsafilidas = epsafilidas;
        this.fechaExpedicion = fechaExpedicion;
        this.fechaVencimiento = fechaVencimiento;
        this.estado = estado;
-       this.medicamentoses = medicamentoses;
     }
    
      @Id @GeneratedValue(strategy=IDENTITY)
@@ -63,7 +61,7 @@ public class Autorizacion  implements java.io.Serializable {
         this.numero = numero;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="EPSAfilidas_idEPS", nullable=false)
     public Epsafilida getEpsafilidas() {
         return this.epsafilidas;
@@ -99,22 +97,9 @@ public class Autorizacion  implements java.io.Serializable {
         return this.estado;
     }
     
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstado(String estado1) {
+        this.estado = estado1;
     }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="autorizaciones")
-    public Set<Medicamento> getMedicamentoses() {
-        return this.medicamentoses;
-    }
-    
-    public void setMedicamentoses(Set<Medicamento> medicamentoses) {
-        this.medicamentoses = medicamentoses;
-    }
-
-
-
-
 }
 
 

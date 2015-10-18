@@ -68,7 +68,7 @@ public class Medicamento  implements java.io.Serializable {
         this.idMedicamentos = idMedicamentos;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="Autorizaciones_numero", nullable=false)
     public Autorizacion getAutorizaciones() {
         return this.autorizaciones;
