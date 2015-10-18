@@ -65,7 +65,7 @@
                         <a href="#medicamentos"><i class="fa fa-user fa-lg"></i> Medicamentos</a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#skills"><i class="fa fa-rocket fa-lg"></i> SKILLS</a>
+                        <a href="#skills"><i class="fa fa-rocket fa-lg"></i>Consultar Autorizacion</a>
                     </li>
 					<li class="page-scroll">
                         <a href="#doctors"><i class="fa fa-users fa-lg"></i> Doctors</a>
@@ -213,7 +213,7 @@
 							<hr/><hr/><hr/><hr/><hr/>
 						</div>
 						<span class="inline-icon heading-width">
-							<span class="heading-text">Skills</span>
+							<span class="heading-text">Consultar Autorizacion</span>
 						</span>
 						<div class="inline-icon">
 							<hr/><hr/><hr/><hr/><hr/>
@@ -221,83 +221,51 @@
 					</div>
                 </div>
 			</div>	
-			<div class="row text-center">
-				<div class="col-md-3 col-sm-6 animateleft">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="100">
-					<h3>
-						Primary Health Care
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-6 animateleft">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="90">
-					<h3>
-						Pediatric Clinic
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-6 animateright">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="80">
-					<h3>
-						Outpatient Surgery
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-6 animateright">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="70">
-					<h3>
-						Cardiac Clinic
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					</p>
-				</div>
-			</div>
 			<div class="gap-30"></div>
-			<div class="row text-center">
-				<div class="col-md-3 col-sm-6 animateleft">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="100">
-					<h3>
-						WordPress
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-					</p>
+                    
+                            
+                        <form >
+                                <div class="form-group input-group">
+                                    <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
+                                        <label for="name">Numero Registro</label>
+					<input class="form-control" type="text" name="name" id="name" placeholder="Numero Registro">
 				</div>
-				<div class="col-md-3 col-sm-6 animateleft">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="90">
-					<h3>
-						HTML5 & CSS3
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-6 animateright">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="80">
-					<h3>
-						Javascript
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					</p>
-				</div>
-				<div class="col-md-3 col-sm-6 animateright">
-					<input class="knob" readonly="readonly" data-width="150" data-fgColor="#444" data-skin="tron" data-thickness=".1" value="70">
-					<h3>
-						Photoshop
-					</h3>
-					<p>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-					</p>
-				</div>
-			</div>
+                        
+                        <br>
+                        <div class="form-group col-xs-12">
+							<button type="submit" class="btn btn-primary">Consultar</button>
+						</div>
+                       
+                    </form>
+                    <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Codigo Autorizacion</th>
+                            <th>Estado</th>
+                            <th>Medicamento</th>
+                            
+                        </tr>                
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="con in consultarAutorizacion">
+                        <td>
+                            {{con.}}
+                        </td>
+                        <td >
+                            {{con.}}
+                        </td>
+                        <td >
+                            {{con.}}
+                        </td>
+                        
+                    </tr>                 
+                </tbody>
+            </table>
+                       
+                        
+                        
+                        
+                       
 		
 		</div>
 	</section>
