@@ -11,9 +11,7 @@
 
         $scope.selectedPacienteId = -1;
 
-           
-       
-        
+  
         $scope.login=function(){
                 IPSRestAPI.pacienteByIdRequestPromise($scope.usuario).then(
                     //promise success
