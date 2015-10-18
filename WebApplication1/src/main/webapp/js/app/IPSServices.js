@@ -3,6 +3,17 @@
 
     app.service('IPSRestAPI', function ($http) {
         
+        
+        
+        this.pos =function(paciente){
+                $http.post('rest/pedidos' , {"pacientes":paciente,"fechaLlegada":"2015-03-03","direccion":"Cra 18 # 5-15"}).
+                        success(function(){
+                                      alert('Felicidades,su pedido fue creado exitosamente');
+                }).error(function(){
+                    alert("NOOOOO");
+                });
+            }; 
+        
        this.pacientesRequestPromise = function () {            
             return $http({
                 method: 'GET',

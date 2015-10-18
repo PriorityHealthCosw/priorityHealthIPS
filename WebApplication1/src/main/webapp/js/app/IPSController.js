@@ -12,7 +12,7 @@
         $scope.selectedPacienteId = -1;
 
            
-        
+       
         
         $scope.login=function(){
                 IPSRestAPI.pacienteByIdRequestPromise($scope.usuario).then(
@@ -34,7 +34,13 @@
                     }
                 );
             };
-        
+         $scope.crearPedido = function () {
+            
+            IPSRestAPI.pos($scope.paciente);
+            console.log('Shopping kart updated' + JSON.stringify($scope.selectedMedicamentos));
+            
+            
+        };
         
         $scope.medicamentos = [];
 
@@ -58,7 +64,7 @@
         $scope.availableMedicamentosRequestPromise.then(
             //promise success
             function (response) {
-                console.log(response.data);
+                console.log('acksamdcsdkc'+response.data);
                 $scope.medicamentos = response.data;
             },
             //promise error

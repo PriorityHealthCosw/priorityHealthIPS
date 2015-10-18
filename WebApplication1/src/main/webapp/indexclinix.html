@@ -144,15 +144,17 @@
                         <table class="table table-striped" style="cursor: pointer;">
                             <thead>
                                 <tr>
-                                    <th>Identificacion pedido</th>
+                                    <th>Identificacion Medicamento</th>
+                                    <th>nombre</th>
                                     <th>descripcion</th>                          
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="prod in medicamentos" ng-if="prod.autorizaciones.epsafilidas.idEps==EpsId " ng-click="setSelectedMedicamento(prod.idMedicamentos)" >
                                     <!--ng-if="prod.epsafilidas.idEps==3 && prod.estado=='aprobado'" -->
-                                    <td style="background-color:teal"> {{ prod.autorizaciones.epsafilidas.idEps}}</td>
-                                    <td style="background-color:teal">{{ prod.autorizaciones.numero}}</td>
+                                    <td style="background-color:teal"> {{ prod.idMedicamentos}}</td>
+                                    <td style="background-color:teal">{{ prod.nombre}}</td>
+                                    <td style="background-color:teal"> {{ prod.descripcion}}</td>
 
                                 </tr>
                             </tbody>
@@ -163,7 +165,7 @@
 
 
                         
-                        <button center-align class="btn btn-primary filter active" value="OK" ng-click="addToSelectedMedicamentos()">Agregar al pedido.</button>
+                        <button center-align class="btn btn-primary filter active" value="OK" ng-click="addToSelectedMedicamentos()">Agregar al carrito.</button>
                         <br><br>
 
                     </div>
@@ -183,7 +185,7 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Identificacion pedido</th>
+                                            <th>nombre de medicamento</th>
                                             <th>descripcion</th>                            
                                         </tr>
                                     </thead>
@@ -197,6 +199,7 @@
 
                                     </tbody>
                                 </table>
+                                <button center-align class="btn btn-primary filter active" value="OK" ng-click="crearPedido()">Crear pedido.</button>
 				
 			</div>
 	</section>

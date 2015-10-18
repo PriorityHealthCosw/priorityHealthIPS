@@ -100,4 +100,8 @@ public class Clase {
         Iterable<Autorizacion> au = ar.findAll();
         return au;
     }
+
+    public void addNewPedido(Pedido p) {
+        pr.save(p);
+    }
 }
