@@ -3,15 +3,17 @@
         
     app.controller('ipscontroller', function ($scope,MedicamentosSelectionFactory,IPSRestAPI) {
         
-        $scope.usuario='usuario';
+         $scope.usuario='usuario';
         $scope.paciente;
         $scope.Eps;
         $scope.EpsId;
         
 
         $scope.selectedPacienteId = -1;
-       
 
+           
+       
+        
         $scope.login=function(){
                 IPSRestAPI.pacienteByIdRequestPromise($scope.usuario).then(
                     //promise success
