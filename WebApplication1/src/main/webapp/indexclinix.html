@@ -65,10 +65,10 @@
                         <a href="#medicamentos"><i class="fa fa-user fa-lg"></i> Medicamentos</a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#skills"><i class="fa fa-rocket fa-lg"></i>Consultar Autorizacion</a>
+                        <a href="#skills"><i class="fa fa-rocket fa-lg"></i> Consultar Autorizacion</a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#doctors"><i class="fa fa-users fa-lg"></i> Doctors</a>
+                        <a href="#doctors"><i class="fa fa-users fa-lg"></i> Consultar Despacho</a>
                     </li>
 					<li class="page-scroll">
                         <a href="#services"><i class="fa fa-signal fa-lg"></i> Services</a>
@@ -220,33 +220,28 @@
 						</div>
 					</div>
                 </div>
-			</div>	
-			<div class="gap-30"></div>
-                    
-                            
-                        <form >
-                                <div class="form-group input-group">
-                                    <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
-                                        <label for="name">Numero Registro</label>
-					<input class="form-control" type="text" name="name" id="name" placeholder="Numero Registro">
-				</div>
-                        
-                        <br>
-                        <div class="form-group col-xs-12">
-							<button type="submit" class="btn btn-primary">Consultar</button>
-						</div>
-                       
-                    </form>
-                    <table class="table table-condensed table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Codigo Autorizacion</th>
-                            <th>Estado</th>
-                            <th>Medicamento</th>
-                            
-                        </tr>                
-                    </thead>
-                    <tbody>
+            </div>	
+            <div class="gap-30"></div>
+            <form >
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
+                        <label for="name">Numero Registro</label>
+			<input class="form-control" type="text" name="name" id="name" placeholder="Numero Registro">
+                    </div>
+                     <br>
+                    <div class="form-group col-xs-12">
+			<button type="submit" class="btn btn-primary">Consultar</button>
+                    </div>
+            </form>
+            <table class="table table-condensed table-bordered table-striped">
+                <thead>
+                    <tr>
+                       <th>Codigo Autorizacion</th>
+                       <th>Estado</th>
+                       <th>Medicamento</th>
+                    </tr>                
+                </thead>
+                <tbody>
                     <tr ng-repeat="con in consultarAutorizacion">
                         <!--td>
                             {{con.}}
@@ -261,14 +256,9 @@
                     </tr>                 
                 </tbody>
             </table>
-                       
                         
-                        
-                        
-                       
-		
-		</div>
-	</section>
+        </div>
+    </section>
 	
 	
     <section class="grey-area talkabout ">
@@ -290,7 +280,7 @@
                         <hr/><hr/><hr/><hr/><hr/>
                     </div>
                     <span class="inline-icon heading-width">
-                        <span class="heading-text">Staff Doctors</span>
+                        <span class="heading-text">Consultar Despacho</span>
                     </span>
                     <div class="inline-icon">
                         <hr/><hr/><hr/><hr/><hr/>
@@ -299,241 +289,49 @@
             </div>
             <div class="doctors-list">
                 <div class="gap-50"></div>
+                <div class="fullwidth"></div>
                 <div class="fullwidth">
-                    <div class="col-md-6 no-padding">
-                        <div class="fullwidth white-background">
-                            <div class="col-sm-6 no-left-padding">
-                                <div class="image-area">
-                                    <img class="img-responsive" src="img/TemplateImg/doctor-img1.jpg" alt=""/>
-                                </div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li><a href="https://www.facebook.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                                        </li>
-                                        <li><a href="https://plus.google.com/104790504722969782308" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                                        </li>
-                                        <li><a href="https://twitter.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                                        </li>
-                                        <li><a href="http://www.linkedin.com/in/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                                        </li>
-                                        <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 no-padding">
-                                <div class="doctorname">
-                                    <h4>Dr. Suzanne Holroyd</h4>
-                                    <small>SENIOR DOCTOR AT CLINIX</small>
-                                </div>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Speciality</strong></td>
-                                            <td>Outpatient Surgen</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Experience</strong></td>
-                                            <td>40 years of Experience</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Degrees</strong></td>
-                                            <td>MBBS - FCPS</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Training</strong></td>
-                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo ornare, augue</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Work Days</strong></td>
-                                            <td>Monday, Friday</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>	
-                    <div class="col-md-6 no-right-padding">
-                        <div class="fullwidth white-background">
-                            <div class="col-sm-6 no-left-padding">
-                                <div class="image-area">
-                                    <img class="img-responsive" src="img/TemplateImg/doctor-img1.jpg" alt=""/>
-                                </div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li><a href="https://www.facebook.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                                        </li>
-                                        <li><a href="https://plus.google.com/104790504722969782308" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                                        </li>
-                                        <li><a href="https://twitter.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                                        </li>
-                                        <li><a href="http://www.linkedin.com/in/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                                        </li>
-                                        <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 no-padding">
-                                <div class="doctorname">
-                                    <h4>Dr. Suzanne Holroyd</h4>
-                                    <small>SENIOR DOCTOR AT CLINIX</small>
-                                </div>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Speciality</strong></td>
-                                            <td>Outpatient Surgen</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Experience</strong></td>
-                                            <td>40 years of Experience</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Degrees</strong></td>
-                                            <td>MBBS - FCPS</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Training</strong></td>
-                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo ornare, augue</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Work Days</strong></td>
-                                            <td>Monday, Friday</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="fullwidth">
-                    <div class="col-md-6 no-padding">
-                        <div class="fullwidth white-background">
-                            <div class="col-sm-6 no-left-padding">
-                                <div class="image-area">
-                                    <img class="img-responsive" src="img/TemplateImg/doctor-img1.jpg" alt=""/>
-                                </div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li><a href="https://www.facebook.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                                        </li>
-                                        <li><a href="https://plus.google.com/104790504722969782308" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                                        </li>
-                                        <li><a href="https://twitter.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                                        </li>
-                                        <li><a href="http://www.linkedin.com/in/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                                        </li>
-                                        <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 no-padding">
-                                <div class="doctorname">
-                                    <h4>Dr. Suzanne Holroyd</h4>
-                                    <small>SENIOR DOCTOR AT CLINIX</small>
-                                </div>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Speciality</strong></td>
-                                            <td>Outpatient Surgen</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Experience</strong></td>
-                                            <td>40 years of Experience</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Degrees</strong></td>
-                                            <td>MBBS - FCPS</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Training</strong></td>
-                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo ornare, augue</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Work Days</strong></td>
-                                            <td>Monday, Friday</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>	
-                    <div class="col-md-6 no-right-padding">
-                        <div class="fullwidth white-background">
-                            <div class="col-sm-6 no-left-padding">
-                                <div class="image-area">
-                                    <img class="img-responsive" src="img/TemplateImg/doctor-img1.jpg" alt=""/>
-                                </div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li><a href="https://www.facebook.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                                        </li>
-                                        <li><a href="https://plus.google.com/104790504722969782308" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                                        </li>
-                                        <li><a href="https://twitter.com/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                                        </li>
-                                        <li><a href="http://www.linkedin.com/in/themifycloud" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                                        </li>
-                                        <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 no-padding">
-                                <div class="doctorname">
-                                    <h4>Dr. Suzanne Holroyd</h4>
-                                    <small>SENIOR DOCTOR AT CLINIX</small>
-                                </div>
-                                <table class="table">
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Speciality</strong></td>
-                                            <td>Outpatient Surgen</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Experience</strong></td>
-                                            <td>40 years of Experience</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Degrees</strong></td>
-                                            <td>MBBS - FCPS</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Training</strong></td>
-                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo ornare, augue</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Work Days</strong></td>
-                                            <td>Monday, Friday</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    
+                        
+                        <form >
+                                <div class="form-group input-group">
+                                    <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
+                                        <label for="name">Numero Registro</label>
+					<input class="form-control" type="text" name="name" id="name" placeholder="Numero Registro">
+				</div>
+                        
+                        <br>
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-primary">Consultar</button>
+			</div>
+                       
+                    </form>
+                    <table class="table table-condensed table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Codigo Despacho</th>
+                            <th>Estado</th>
+                            <th>Medicamento</th>
+                            <th>Tiempo</th>
+                        </tr>                
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="con in consultarAutorizacion">
+                        <!--td>
+                            {{con.}}
+                        </td-->
+                        <!--td>
+                            {{con.}}
+                        </td-->
+                         <!--td>
+                            {{con.}}
+                        </td-->
+                        
+                    </tr>                 
+                </tbody>
+            </table>
+                    
+                    
                 </div>
 
             </div>
