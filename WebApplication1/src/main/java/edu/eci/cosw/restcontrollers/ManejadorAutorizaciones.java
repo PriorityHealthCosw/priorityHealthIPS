@@ -5,6 +5,7 @@
  */
 package edu.eci.cosw.restcontrollers;
 
+import edu.eci.cosw.samples.logica.AutorizacionFachada;
 import edu.eci.cosw.samples.logica.Clase;
 import edu.eci.cosw.samples.model.Autorizacion;
 import edu.eci.cosw.samples.model.Epsafilida;
@@ -29,6 +30,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ManejadorAutorizaciones {
     @Autowired
     Clase c;
+    AutorizacionFachada vf;
+    
+   
 
     @RequestMapping(value="/{id}",method = RequestMethod.GET)
      public Autorizacion consped(@PathVariable int id) throws OperationFailedException{
@@ -42,8 +46,18 @@ public class ManejadorAutorizaciones {
      
      @RequestMapping(method = RequestMethod.GET)        
     public List<Autorizacion> allAutorizaciones() {        
-        List<Autorizacion> au=new ArrayList<Autorizacion>();
+        List<Autorizacion> au = new ArrayList<Autorizacion>();
         au=(List<Autorizacion>) c.consultarAutorizaciones();
         return au;
     }
+    
+    
+    
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public List<Autorizacion> consultarTodasVentas()throws OperationFailedException{
+        return vf.TodasAutorizaciones();
+        //return vf.ventasTotalesDummy();
+    }
+    
+    
 }

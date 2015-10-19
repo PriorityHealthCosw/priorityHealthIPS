@@ -105,7 +105,7 @@
         
         $scope.getAutorizacion = function(){
             
-            $scope.consulAuto = IPSRestAPI.getConsuntarAutorizacion().success(function(data, status,headers, config){
+            $scope.consulAuto = IPSRestAPI.getConsultarAutorizacion().success(function(data, status,headers, config){
             $scope.consulAuto = data;
         } );
     };

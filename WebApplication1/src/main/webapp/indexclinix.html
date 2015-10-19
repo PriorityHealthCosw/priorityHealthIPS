@@ -222,7 +222,7 @@
                 </div>
             </div>	
             <div class="gap-30"></div>
-            <form >
+            
                     <div class="form-group input-group">
                         <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
                         <label for="name">Numero Registro</label>
@@ -230,9 +230,9 @@
                     </div>
                      <br>
                     <div class="form-group col-xs-12">
-                        <button type="submit" class="btn btn-primary" ng-click="AutorizacionPorPaciente()">Consultar</button>
+                        <button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar</button>
                     </div>
-            </form>
+            
             <table class="table table-condensed table-bordered table-striped">
                 <thead>
                     <tr>
@@ -244,13 +244,13 @@
                 <tbody>
                     <tr ng-repeat="con in consultarAutorizacion">
                         <td>
-                            {{con.idAutorizacion}}
+                            {{con.numero}}
                         </td>
                         <td>
-                            {{con.consulAuto.estado}}
+                            {{con.consulAuto.autorizaciones.estado}}
                         </td>
                          <td>
-                            {{con.consulAuto.nombres}}
+                            {{con.consulAuto.autorizaciones.estado}}
                         </td>
                         
                     </tr>                 

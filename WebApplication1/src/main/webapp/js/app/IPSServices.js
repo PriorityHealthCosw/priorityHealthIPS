@@ -101,7 +101,7 @@
             return $http.get('http://localhost:8080/intento1/rest/autorizaciones/'+id);
         }; 
         
-        this.getConsuntarAutorizacion = function(){
+        this.getConsultarAutorizacion = function(){
             return $http.get('http://localhost:8080/intento1/rest/autorizaciones/');
         };
     

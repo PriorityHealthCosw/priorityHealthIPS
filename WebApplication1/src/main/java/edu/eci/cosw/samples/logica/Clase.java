@@ -104,4 +104,11 @@ public class Clase {
     public void addNewPedido(Pedido p) {
         pr.save(p);
     }
+    
+    
+    
+    
+    
+    
+    
 }

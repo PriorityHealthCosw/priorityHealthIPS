@@ -6,6 +6,7 @@
 package edu.eci.cosw.samples.persistencia;
 
 import edu.eci.cosw.samples.model.Autorizacion;
+import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -17,4 +18,10 @@ import org.springframework.data.repository.query.Param;
 public interface AutorizacionRepository extends CrudRepository<Autorizacion, Integer>{
     @Query("from Autorizacion a where a.numero= :ln")
     public Autorizacion search(@Param("ln") int searchTerm);
+    
+     @Query("from Autorizacion a")
+    public List<Autorizacion> getAutorizaciones();
+    
+    
+
 }
