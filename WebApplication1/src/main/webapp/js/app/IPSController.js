@@ -3,12 +3,10 @@
         
     app.controller('ipscontroller', function ($scope,MedicamentosSelectionFactory,IPSRestAPI) {
         
-         $scope.usuario='usuario';
+        $scope.usuario='usuario';
         $scope.paciente;
         $scope.Eps;
         $scope.EpsId;
-        
-
         $scope.selectedPacienteId = -1;
 
   
@@ -36,9 +34,7 @@
             
             IPSRestAPI.pos($scope.paciente);
             console.log('Shopping kart updated' + JSON.stringify($scope.selectedMedicamentos));
-            
-            
-        };
+         };
         
         $scope.medicamentos = [];
 
@@ -99,10 +95,24 @@
 
             };
         
+        $scope.idPaciente = 0;
+        
+        $scope.AutorizacionPorPaciente = function (){
+            $scope.autorizacion = IPSRestAPI.getAutorizacionByPaciente($scope.idPaciente).success(function (data){
+            $scope.autorizacion = data; 
+          });
+        };
+        
+        $scope.getAutorizacion = function(){
+            
+            $scope.consulAuto = IPSRestAPI.getConsuntarAutorizacion().success(function(data, status,headers, config){
+            $scope.consulAuto = data;
+        } );
+    };
         
         
-    }
-    );
+        
+    });
     
     app.factory('MedicamentosSelectionFactory', function () {
         var data = {

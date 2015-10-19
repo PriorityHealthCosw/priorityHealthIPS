@@ -230,7 +230,7 @@
                     </div>
                      <br>
                     <div class="form-group col-xs-12">
-			<button type="submit" class="btn btn-primary">Consultar</button>
+                        <button type="submit" class="btn btn-primary" ng-click="AutorizacionPorPaciente()">Consultar</button>
                     </div>
             </form>
             <table class="table table-condensed table-bordered table-striped">
@@ -243,15 +243,15 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="con in consultarAutorizacion">
-                        <!--td>
-                            {{con.}}
-                        </td-->
-                        <!--td>
-                            {{con.}}
-                        </td-->
-                         <!--td>
-                            {{con.}}
-                        </td-->
+                        <td>
+                            {{con.idAutorizacion}}
+                        </td>
+                        <td>
+                            {{con.consulAuto.estado}}
+                        </td>
+                         <td>
+                            {{con.consulAuto.nombres}}
+                        </td>
                         
                     </tr>                 
                 </tbody>

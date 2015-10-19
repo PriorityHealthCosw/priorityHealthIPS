@@ -3,8 +3,6 @@
 
     app.service('IPSRestAPI', function ($http) {
         
-        
-        
         this.pos =function(paciente){
                 $http.post('rest/pedidos' , {"pacientes":paciente,"fechaLlegada":"2015-03-03","direccion":"Cra 18 # 5-15"}).
                         success(function(){
@@ -99,6 +97,15 @@
             });            
         };
         
+        this.getAutorizacionByPaciente = function(id){
+            return $http.get('http://localhost:8080/intento1/rest/autorizaciones/'+id);
+        }; 
+        
+        this.getConsuntarAutorizacion = function(){
+            return $http.get('http://localhost:8080/intento1/rest/autorizaciones/');
+        };
+    
+    
     }
     );
 
