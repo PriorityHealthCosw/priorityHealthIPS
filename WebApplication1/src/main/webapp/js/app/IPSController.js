@@ -107,7 +107,15 @@
             $scope.consulAuto = IPSRestAPI.getConsultarAutorizacion().success(function(data){
             $scope.consulAuto = data;
         } );
-    };
+        };
+        
+        $scope.getMedicamentos = function (){
+            $scope.consulAuto = IPSRestAPI.getConsultarMedicamento().success(function(data){
+            $scope.consulAuto = data;
+        } );
+        };
+    
+    
         
         
         

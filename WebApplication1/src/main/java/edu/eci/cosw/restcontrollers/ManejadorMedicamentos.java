@@ -38,10 +38,17 @@ public class ManejadorMedicamentos {
         return p;
      }
      
-     @RequestMapping(method = RequestMethod.GET)        
+    @RequestMapping(method = RequestMethod.GET)        
     public List<Medicamento> allMedicamentos() {        
         List<Medicamento> m=new ArrayList<Medicamento>();
         m=(List<Medicamento>) c.consultarMedicamentos();
         return m;
     }
+    
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public List<Medicamento> consultarMedicamento()throws OperationFailedException{
+        return c.TodosMedicamentos();
+    }
+    
+    
 }

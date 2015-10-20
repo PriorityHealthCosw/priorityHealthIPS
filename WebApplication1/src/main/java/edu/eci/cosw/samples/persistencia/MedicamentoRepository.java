@@ -21,4 +21,8 @@ import org.springframework.data.repository.query.Param;
 public interface MedicamentoRepository extends CrudRepository<Medicamento, Integer>{
     @Query("from Medicamento p where p.idMedicamentos= :ln")
     public Pedido search(@Param("ln") int searchTerm);
+    
+     @Query("from Medicamento a")
+    public List<Medicamento> getMedicamentos();
+    
 }

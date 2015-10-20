@@ -113,7 +113,9 @@ public class Clase {
         pr.save(p);
     }
 
-  
+  /*========================================================================
+                              AUTORIZACION
+    ========================================================================*/
     @Transactional
     public void guardarAutorizacion(Autorizacion v){
         ar.save(v);
@@ -123,11 +125,8 @@ public class Clase {
         return ar.getAutorizaciones();
     }
     
-    
-    
-    
-    
-    
-    
+    public List<Medicamento> TodosMedicamentos(){
+        return mr.getMedicamentos();
+    }
     
 }

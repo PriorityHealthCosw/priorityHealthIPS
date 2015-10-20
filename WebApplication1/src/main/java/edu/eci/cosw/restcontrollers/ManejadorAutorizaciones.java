@@ -34,9 +34,9 @@ public class ManejadorAutorizaciones {
     @Autowired
     Clase c;
  
- @RequestMapping(value="/{id}",method = RequestMethod.GET)
+ @RequestMapping(value="/{id}", method = RequestMethod.GET)
      public Autorizacion consped(@PathVariable int id) throws OperationFailedException{
-        Autorizacion au=c.consultarAutorizacion(id);
+        Autorizacion au = c.consultarAutorizacion(id);
         
         if(au==null){
             throw new OperationFailedException();
