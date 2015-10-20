@@ -91,7 +91,6 @@ public class Autorizacion  implements java.io.Serializable {
         this.fechaVencimiento = fechaVencimiento;
     }
 
-    
     @Column(name="estado", length=45)
     public String getEstado() {
         return this.estado;

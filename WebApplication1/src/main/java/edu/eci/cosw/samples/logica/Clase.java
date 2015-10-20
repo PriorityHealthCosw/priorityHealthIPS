@@ -17,6 +17,8 @@ import edu.eci.cosw.samples.persistencia.MedicamentoPPRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoRepository;
 import edu.eci.cosw.samples.persistencia.PacientesRepository;
 import edu.eci.cosw.samples.persistencia.PedidosRepository;
+import java.util.List;
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,14 +32,19 @@ public class Clase {
 
     @Autowired
     PedidosRepository pr;
+    
     @Autowired
     MedicamentoPPRepository mppr;
+    
     @Autowired
     MedicamentoRepository mr;
+    
     @Autowired
     PacientesRepository par;
+    
     @Autowired
     EpsafilidaRepository epsr;
+    
     @Autowired
     AutorizacionRepository ar;
     
@@ -101,9 +108,21 @@ public class Clase {
         return au;
     }
 
+    
     public void addNewPedido(Pedido p) {
         pr.save(p);
     }
+
+  
+    @Transactional
+    public void guardarAutorizacion(Autorizacion v){
+        ar.save(v);
+    }
+    
+    public List<Autorizacion> TodasAutorizaciones(){
+        return ar.getAutorizaciones();
+    }
+    
     
     
     

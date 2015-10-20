@@ -242,25 +242,22 @@
                     </tr>                
                 </thead>
                 <tbody>
-                    <tr ng-repeat="con in consultarAutorizacion">
+                    <tr ng-repeat="con in consulAuto">
                         <td>
                             {{con.numero}}
                         </td>
                         <td>
-                            {{con.consulAuto.autorizaciones.estado}}
+                            {{con.estado}}
                         </td>
                          <td>
-                            {{con.consulAuto.autorizaciones.estado}}
+                            {{con.epsafilidas.nombre}}
                         </td>
                         
                     </tr>                 
                 </tbody>
-            </table>
-                        
+            </table>    
         </div>
     </section>
-	
-	
     <section class="grey-area talkabout ">
 		<h2 class="main_heading animatezoomin">Let's Talk About Your Disease</h2>
 		
