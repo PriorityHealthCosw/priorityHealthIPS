@@ -97,11 +97,11 @@
 
             };
         
-        $scope.idPaciente = 0;
+        $scope.idPaciente;
         
         $scope.AutorizacionPorPaciente = function (){
-            $scope.autorizacion = IPSRestAPI.getAutorizacionByPaciente($scope.idPaciente).success(function (data){
-            $scope.autorizacion = data; 
+            $scope.consulAuto = IPSRestAPI.getAutorizacionByPaciente($scope.idPaciente).success(function (data){
+            $scope.consulAuto = data; 
           });
         };
         
@@ -116,6 +116,9 @@
             $scope.consulAuto = data;
         } );
         };
+        
+        
+        
         
         $scope.ConsultarPedido=function(){
             

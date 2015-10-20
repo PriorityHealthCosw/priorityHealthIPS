@@ -34,7 +34,7 @@ public class ManejadorAutorizaciones {
     @Autowired
     Clase c;
  
- @RequestMapping(value="/{id}", method = RequestMethod.GET)
+ /*@RequestMapping(value="/{id}", method = RequestMethod.GET)
      public Autorizacion consped(@PathVariable int id) throws OperationFailedException{
         Autorizacion au = c.consultarAutorizacion(id);
         
@@ -42,7 +42,7 @@ public class ManejadorAutorizaciones {
             throw new OperationFailedException();
         }
         return au;
-     }
+     }*/
     
      @RequestMapping(method = RequestMethod.GET)        
     public List<Autorizacion> allAutorizaciones() {        
@@ -54,6 +54,11 @@ public class ManejadorAutorizaciones {
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public List<Autorizacion> consultarTodasAutorizaciones()throws OperationFailedException{
         return c.TodasAutorizaciones();
+    }
+    
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    public List<Autorizacion> AutorizacionPorPaciente(@PathVariable int id)throws OperationFailedException{
+        return c.ConsultarAutorizacionPaciente(id);
     }
     
     

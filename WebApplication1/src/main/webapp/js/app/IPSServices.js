@@ -129,10 +129,6 @@
          this.getConsultarMedicamento = function(){
             return $http.get('http://localhost:8080/intento1/rest/medicamentos/');
         };
-        
-        
-    
-    
     }
     );
 

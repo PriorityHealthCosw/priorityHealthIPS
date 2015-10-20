@@ -225,20 +225,24 @@
             
                     <div class="form-group input-group">
                         <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
-                        <label for="name">Numero Registro</label>
-			<input class="form-control" type="text" name="name" id="name" placeholder="Numero Registro">
+                        <label for="name">Numero Registro Autorizacion</label>
+			<input class="form-control" type="text" ng-model="idPaciente" id="idPaciente" placeholder="Numero Registro Autorizacion">
                     </div>
                      <br>
                     <div class="form-group col-xs-12">
-                        <button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar</button>
+                       <!--button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar Todas</button-->
+                       <button type="submit" class="btn btn-primary" ng-click="AutorizacionPorPaciente()">Consultar</button>
                     </div>
             
             <table class="table table-condensed table-bordered table-striped">
                 <thead>
                     <tr>
                        <th>Codigo Autorizacion</th>
+                       <th>Nombre</th>
                        <th>Estado</th>
-                       <th>Medicamento</th>
+                       <th>Fecha Expedicion</th>
+                       <th>Fecha Vencimiento</th>
+                       
                     </tr>                
                 </thead>
                 <tbody>
@@ -246,13 +250,18 @@
                         <td>
                             {{con.numero}}
                         </td>
+                         <td>
+                            {{con.epsafilidas.nombre}}
+                        </td>
                         <td>
                             {{con.estado}}
                         </td>
-                         <td>
-                            {{con.ep}}
+                        <td>
+                            {{con.fechaExpedicion}}
                         </td>
-                        
+                        <td>
+                            {{con.fechaVencimiento}}
+                        </td>
                     </tr>                 
                 </tbody>
             </table>    

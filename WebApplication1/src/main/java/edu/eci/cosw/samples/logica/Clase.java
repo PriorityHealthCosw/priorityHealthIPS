@@ -147,4 +147,7 @@ public class Clase {
         return mr.getMedicamentos();
     }
     
+    public List<Autorizacion> ConsultarAutorizacionPaciente(int id){
+        return ar.AutorizacionPorPaciente(id);
+    }
 }
