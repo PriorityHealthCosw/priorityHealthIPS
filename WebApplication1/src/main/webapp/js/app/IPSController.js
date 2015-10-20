@@ -8,6 +8,8 @@
         $scope.Eps;
         $scope.EpsId;
         $scope.selectedPacienteId = -1;
+        $scope.pedido;
+        $scope.idordenCompra;
 
   
         $scope.login=function(){
@@ -113,6 +115,14 @@
             $scope.consulAuto = IPSRestAPI.getConsultarMedicamento().success(function(data){
             $scope.consulAuto = data;
         } );
+        };
+        
+        $scope.ConsultarPedido=function(){
+            
+            $scope.pedido= IPSRestAPI.getOrdenCompra($scope.idordenCompra).success(function(data){
+                $scope.pedido=data;
+            });
+            
         };
     
     

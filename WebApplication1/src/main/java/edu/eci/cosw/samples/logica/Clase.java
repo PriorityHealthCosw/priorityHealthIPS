@@ -6,12 +6,14 @@
 package edu.eci.cosw.samples.logica;
 
 import edu.eci.cosw.samples.model.Autorizacion;
+import edu.eci.cosw.samples.model.DetalleOrdenCompra;
 import edu.eci.cosw.samples.model.Epsafilida;
 import edu.eci.cosw.samples.model.Medicamento;
 import edu.eci.cosw.samples.model.MedicamentoPorProveedor;
 import edu.eci.cosw.samples.model.Paciente;
 import edu.eci.cosw.samples.model.Pedido;
 import edu.eci.cosw.samples.persistencia.AutorizacionRepository;
+import edu.eci.cosw.samples.persistencia.DetalleOrdenConprRepository;
 import edu.eci.cosw.samples.persistencia.EpsafilidaRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoPPRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoRepository;
@@ -37,6 +39,9 @@ public class Clase {
     MedicamentoPPRepository mppr;
     
     @Autowired
+    DetalleOrdenConprRepository doc;
+    
+    @Autowired
     MedicamentoRepository mr;
     
     @Autowired
@@ -47,6 +52,19 @@ public class Clase {
     
     @Autowired
     AutorizacionRepository ar;
+    
+    
+    public DetalleOrdenCompra consultarOrden (int id) {
+    
+        DetalleOrdenCompra p = doc.findOne(id);
+        return p;
+    }
+    
+    public Iterable<DetalleOrdenCompra> consultarOrdenes(){
+        
+        Iterable<DetalleOrdenCompra> p = doc.findAll();
+        return p;
+    }
     
     public Pedido consultarPedido(int id) {
         Pedido p= pr.findOne(id);

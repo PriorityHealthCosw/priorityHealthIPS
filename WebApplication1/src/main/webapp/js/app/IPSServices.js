@@ -97,6 +97,27 @@
             });            
         };
         
+        this.detalleOrdenCompraRequestPromise = function(){
+          return $http({
+              method : 'GET',
+              url: 'rest/detalleOrdenCompra'
+          });  
+        };
+        
+        this.detalleOrdenCompraByIdRequestPromise = function(id){
+            
+            return $http({
+                
+              method : 'GET',
+              url: 'rest/detalleOrdenCompra/'+id
+            });
+        };
+        
+        this.getOrdenCompra= function(id){
+          
+            return $http.get('http://localhost:8080/intento1/rest/detalleOrdenCompra/'+id);
+        };
+        
         this.getAutorizacionByPaciente = function(id){
             return $http.get('http://localhost:8080/intento1/rest/autorizaciones/'+id);
         }; 
