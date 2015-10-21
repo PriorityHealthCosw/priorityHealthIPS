@@ -7,6 +7,7 @@ package edu.eci.cosw.samples.logica;
 
 import edu.eci.cosw.samples.model.Autorizacion;
 import edu.eci.cosw.samples.model.Cotizacion;
+import edu.eci.cosw.samples.model.Despacho;
 import edu.eci.cosw.samples.model.DetalleInventario;
 import edu.eci.cosw.samples.model.DetalleOrdenCompra;
 import edu.eci.cosw.samples.model.Epsafilida;
@@ -20,6 +21,7 @@ import edu.eci.cosw.samples.model.Pedido;
 import edu.eci.cosw.samples.model.Proveedor;
 import edu.eci.cosw.samples.persistencia.AutorizacionRepository;
 import edu.eci.cosw.samples.persistencia.CotizacionesRepository;
+import edu.eci.cosw.samples.persistencia.DespachoRepository;
 import edu.eci.cosw.samples.persistencia.DetalleOrdenConprRepository;
 import edu.eci.cosw.samples.persistencia.DetallesInventarioRepository;
 import edu.eci.cosw.samples.persistencia.DetallesOrdenesCompraRepository;
@@ -73,17 +75,24 @@ public class Clase {
     
     @Autowired
     DetallesInventarioRepository dir;
+    
     @Autowired
     CotizacionesRepository cr;
+    
     @Autowired
     ProveedoresRepository prr;
+    
     @Autowired
     OrdenesCompraRepository ocr;
+    
     @Autowired
     DetallesOrdenesCompraRepository docr;
+    
     @Autowired
     InventarioRepository invr;
     
+    @Autowired
+    DespachoRepository des;
     
     public DetalleOrdenCompra consultarOrden (int id) {
     
@@ -96,7 +105,7 @@ public class Clase {
         Iterable<DetalleOrdenCompra> p = doc.findAll();
         return p;
     }
-    
+       
     public Pedido consultarPedido(int id) {
         Pedido p= pr.findOne(id);
         return p;
@@ -161,9 +170,17 @@ public class Clase {
     public void addNewPedido(Pedido p) {
         pr.save(p);
     }
+    
+    public Iterable<Despacho> consultarDespachos(){
+        
+        Iterable<Despacho> p = des.findAll();
+        return p;
+    }
+    
+    
 
   /*========================================================================
-                              AUTORIZACION
+                              AUTORIZACION - DESPACHO
     ========================================================================*/
     @Transactional
     public void guardarAutorizacion(Autorizacion v){
@@ -181,6 +198,15 @@ public class Clase {
     public List<Autorizacion> ConsultarAutorizacionPaciente(int id){
         return ar.AutorizacionPorPaciente(id);
     }
+    
+    public List<Despacho> ConsultarDespachoPaciente(int id){
+        return des.DespachoPorPaciente(id);
+    }
+    
+     public List<Despacho> TodasDespacho(){
+        return des.getDespachos();
+    }
+    
     /*========================================================================
                               ORDEN DE COMPRA
     ========================================================================*/

@@ -126,9 +126,19 @@
             return $http.get('http://localhost:8080/intento1/rest/autorizaciones/');
         };
         
-         this.getConsultarMedicamento = function(){
-            return $http.get('http://localhost:8080/intento1/rest/medicamentos/');
+        this.getConsultarDespacho= function(){
+            return $http.get('http://localhost:8080/intento1/rest/despachos/');
         };
+        
+        this.getConsultarDespacho= function(){
+            return $http.get('http://localhost:8080/intento1/rest/despachos/');
+        };
+        
+        
+       this.getDespachoByPaciente = function(id){
+            return $http.get('http://localhost:8080/intento1/rest/despachos/'+id);
+        }; 
+        
         
         //////////////////////////////////////////////////////////////////////////
         this.mensajerosRequestPromise = function () {            

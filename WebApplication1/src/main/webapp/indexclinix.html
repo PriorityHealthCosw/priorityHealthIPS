@@ -268,11 +268,11 @@
         </div>
     </section>
     <section class="grey-area talkabout ">
-		<h2 class="main_heading animatezoomin">Let's Talk About Your Disease</h2>
+		<h2 class="main_heading animatezoomin"></h2>
 		
 			<div class="gap-80"></div>
 			<div class="page-scroll">
-				<a href="#contact" class="btn btn-default btn-lg animatezoomin"><i class="fa fa-hand-o-right fa-fw"></i> GET IN TOUCH</a>
+				<a href="#contact" class="btn btn-default btn-lg animatezoomin"> </a>
 			</div>
 	</section>
     
@@ -298,41 +298,42 @@
                 <div class="fullwidth"></div>
                 <div class="fullwidth">
                     
-                        
-                        <form >
                                 <div class="form-group input-group">
                                     <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
-                                        <label for="name">Numero Registro</label>
-					<input class="form-control" type="text" name="name" id="name" placeholder="Numero Registro">
+                                        <label for="name">Numero Registro de Despacho</label>
+					<input class="form-control" type="text" ng-model="idDespacho" id="idDespacho" placeholder="Numero Registro de Despacho">
 				</div>
                         
                         <br>
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-primary">Consultar</button>
+                            <button type="submit" class="btn btn-primary" ng-click="DespachoPorPaciente()" >Consultar</button>
 			</div>
                        
-                    </form>
+                    
                     <table class="table table-condensed table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>Codigo Despacho</th>
                             <th>Estado</th>
-                            <th>Medicamento</th>
+                            <th>Pago</th>
                             <th>Tiempo</th>
                         </tr>                
                     </thead>
                     <tbody>
-                    <tr ng-repeat="con in consultarAutorizacion">
-                        <!--td>
-                            {{con.}}
-                        </td-->
-                        <!--td>
-                            {{con.}}
-                        </td-->
-                         <!--td>
-                            {{con.}}
-                        </td-->
-                        
+                    <tr ng-repeat="con in consulDes">
+                        <td>
+                            {{con.idDespacho}}
+                        </td>
+                        <td>
+                            {{con.estado}}
+                        </td>
+                        <td>
+                            {{con.numeroPagoCoutaModeradora}}
+                        </td>
+                         
+                        <td>
+                            {{con.tiempoEspera}}
+                        </td>
                     </tr>                 
                 </tbody>
             </table>
@@ -345,31 +346,16 @@
     </section>
     
         <section class="grey-area testimonial-section">
-		<h2 class="main_heading animatezoomin">Testimonials</h2>
+		<h2 class="main_heading animatezoomin"></h2>
 		
 			<div class="gap-50"></div>
 			<div class="container animatezoomin">
 				<div class="row">
 					<div class="col-sm-12">
-						<div id="testimonials-2" class="slide testimonial testimonial-version1 animateright">
+						<div id="testimonials-2" >
 							<!-- Testimonial items -->
 							<div class="carousel-inner">
-								<div class="item active">
-									<div class="textbox">
-										<p class="reviewcomment">
-											Clinix is premium, so clean, super flexible and has a fully responsive doctorgallary! This Template sets the new standard with endless possibilities. Built with HTML5 & CSS3, a lot of thought and care went into this template making it a pleasure to use										
-										</p>
-									</div>
-									<div class="fullwidth">
-										<div class="testimonial-metadata">
-											<h3>
-												Jone Doe
-											</h3>
-											<br>
-											
-										</div>
-									</div>
-								</div>
+								
 								<!--/item-->
 								<div class="item">
 									<div class="textbox">

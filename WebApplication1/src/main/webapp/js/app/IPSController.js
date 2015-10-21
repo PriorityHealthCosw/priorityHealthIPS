@@ -99,6 +99,7 @@
             };
         
         $scope.idPaciente;
+        $scope.idDespacho;
         
         $scope.AutorizacionPorPaciente = function (){
             $scope.consulAuto = IPSRestAPI.getAutorizacionByPaciente($scope.idPaciente).success(function (data){
@@ -111,6 +112,19 @@
             $scope.consulAuto = data;
         } );
         };
+        
+        $scope.DespachoPorPaciente = function (){
+            $scope.consulDes = IPSRestAPI.getDespachoByPaciente($scope.idDespacho).success(function (data){
+            $scope.consulDes = data; 
+          });
+        };
+        
+        $scope.getDespacho = function(){
+            $scope.consulDes = IPSRestAPI.getConsultarDespacho().success(function(data){
+            $scope.consulDes = data;
+        } );
+        };
+              
         
         $scope.getMedicamentos = function (){
             $scope.consulAuto = IPSRestAPI.getConsultarMedicamento().success(function(data){
