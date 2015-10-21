@@ -100,7 +100,7 @@
         this.detalleOrdenCompraRequestPromise = function(){
           return $http({
               method : 'GET',
-              url: 'rest/detalleOrdenCompra'
+              url: 'rest/detallesOrdenesCompra'
           });  
         };
         
@@ -109,13 +109,13 @@
             return $http({
                 
               method : 'GET',
-              url: 'rest/detalleOrdenCompra/'+id
+              url: 'rest/detallesOrdenesCompra/'+id
             });
         };
         
-        this.getOrdenCompra= function(id){
+        this.getDetalleOrdenCompra= function(id){
           
-            return $http.get('http://localhost:8080/intento1/rest/detalleOrdenCompra/'+id);
+            return $http.get('http://localhost:8080/intento1/rest/detallesOrdenesCompra/'+id);
         };
         
         this.getAutorizacionByPaciente = function(id){

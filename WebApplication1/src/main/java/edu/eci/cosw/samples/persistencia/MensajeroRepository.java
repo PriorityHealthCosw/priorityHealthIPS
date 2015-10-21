@@ -19,5 +19,5 @@ import org.springframework.data.repository.query.Param;
  */
 public interface MensajeroRepository extends CrudRepository<Mensajero, Integer>{
     @Query("from Mensajero m where m.idEmpleados= :id")
-    public Paciente search(@Param("id") int searchTerm);
+    public Mensajero search(@Param("id") int searchTerm);
 }
