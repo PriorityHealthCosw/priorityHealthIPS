@@ -22,8 +22,8 @@ import org.springframework.data.repository.query.Param;
  */
 public interface DetallesOrdenesCompraRepository extends CrudRepository<DetalleOrdenCompra, Integer>{
    
-@Query("from DetalleOrdenCompra doc where doc.idOrdenesCompra= :idDetallesOrdenesCompra  ")
-    public DetalleOrdenCompra DetalleOrdenCompraPorId(@Param("idOrdenesCompra") int idOrdenesCompra);
+@Query("from DetalleOrdenCompra doc where doc.idDetallesOrdenesCompra= :idDetallesOrdenesCompra  ")
+    public DetalleOrdenCompra DetalleOrdenCompraPorId(@Param("idDetallesOrdenesCompra") int idDetallesOrdenesCompra);
 
 }
 
