@@ -38,12 +38,21 @@ public class OrdenCompra  implements java.io.Serializable {
     public OrdenCompra(Date fecha) {
         this.fecha = fecha;
     }
+    
+     public OrdenCompra(Date fecha, Set<DetalleOrdenCompra> detallesOrdenesCompras) {
+       this.fecha = fecha;
+       this.detallesOrdenesCompras = detallesOrdenesCompras;
+   
+    }
+    
     public OrdenCompra(Date fecha, Set<DetalleOrdenCompra> detallesOrdenesCompras, Set<Devolucion> devolucioneses) {
        this.fecha = fecha;
        this.detallesOrdenesCompras = detallesOrdenesCompras;
        this.devolucioneses = devolucioneses;
     }
    
+    
+    
      @Id @GeneratedValue(strategy=IDENTITY)
 
     

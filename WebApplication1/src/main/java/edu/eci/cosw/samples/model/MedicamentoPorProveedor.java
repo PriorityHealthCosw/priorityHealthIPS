@@ -66,7 +66,7 @@ public class MedicamentoPorProveedor  implements java.io.Serializable {
         this.idMedicamentosProvedor = idMedicamentosProvedor;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="idMedicamentos", nullable=false)
     public Medicamento getMedicamentos() {
         return this.medicamentos;
@@ -76,7 +76,7 @@ public class MedicamentoPorProveedor  implements java.io.Serializable {
         this.medicamentos = medicamentos;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="idProveedores", nullable=false)
     public Proveedor getProveedores() {
         return this.proveedores;

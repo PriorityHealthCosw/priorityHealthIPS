@@ -35,6 +35,9 @@ public class DetalleOrdenCompra  implements java.io.Serializable {
         this.medicamentosPorProveedor = medicamentosPorProveedor;
         this.ordenesCompra = ordenesCompra;
     }
+    
+   
+    
     public DetalleOrdenCompra(MedicamentoPorProveedor medicamentosPorProveedor, OrdenCompra ordenesCompra, Integer cantidad) {
        this.medicamentosPorProveedor = medicamentosPorProveedor;
        this.ordenesCompra = ordenesCompra;

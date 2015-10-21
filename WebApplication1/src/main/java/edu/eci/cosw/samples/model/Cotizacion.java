@@ -42,8 +42,6 @@ public class Cotizacion  implements java.io.Serializable {
     }
    
      @Id 
-
-    
     @Column(name="idCotizaciones", unique=true, nullable=false)
     public int getIdCotizaciones() {
         return this.idCotizaciones;
@@ -53,7 +51,7 @@ public class Cotizacion  implements java.io.Serializable {
         this.idCotizaciones = idCotizaciones;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="Medicamento")
     public Medicamento getMedicamentos() {
         return this.medicamentos;
@@ -63,7 +61,7 @@ public class Cotizacion  implements java.io.Serializable {
         this.medicamentos = medicamentos;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="Proveedor")
     public Proveedor getProveedores() {
         return this.proveedores;

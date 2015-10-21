@@ -63,7 +63,7 @@ public class DetalleInventario  implements java.io.Serializable {
         this.inventario = inventario;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="MedicamentosPorProveedor_idMedicamentosPorProveedror", nullable=false)
     public MedicamentoPorProveedor getMedicamentosPorProveedor() {
         return this.medicamentosPorProveedor;

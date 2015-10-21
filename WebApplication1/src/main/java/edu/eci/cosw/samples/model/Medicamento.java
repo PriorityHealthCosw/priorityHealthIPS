@@ -44,6 +44,20 @@ public class Medicamento  implements java.io.Serializable {
         this.idMedicamentos = idMedicamentos;
         this.autorizaciones = autorizaciones;
     }
+    
+    
+     public Medicamento(int idMedicamentos, Autorizacion autorizaciones, String nombre, String descripcion, String presentacion, Date fechaExpedicion, Date fechaVencimiento) {
+       this.idMedicamentos = idMedicamentos;
+       this.autorizaciones = autorizaciones;
+       this.nombre = nombre;
+       this.descripcion = descripcion;
+       this.presentacion = presentacion;
+       this.fechaExpedicion = fechaExpedicion;
+       this.fechaVencimiento = fechaVencimiento;
+      
+    }
+    
+    
     public Medicamento(int idMedicamentos, Autorizacion autorizaciones, String nombre, String descripcion, String presentacion, Date fechaExpedicion, Date fechaVencimiento, Set<MedicamentoPorProveedor> medicamentosPorProveedors, Set<Cotizacion> cotizacioneses) {
        this.idMedicamentos = idMedicamentos;
        this.autorizaciones = autorizaciones;

@@ -6,20 +6,35 @@
 package edu.eci.cosw.samples.logica;
 
 import edu.eci.cosw.samples.model.Autorizacion;
+import edu.eci.cosw.samples.model.Cotizacion;
+import edu.eci.cosw.samples.model.DetalleInventario;
 import edu.eci.cosw.samples.model.DetalleOrdenCompra;
 import edu.eci.cosw.samples.model.Epsafilida;
+import edu.eci.cosw.samples.model.Inventario;
 import edu.eci.cosw.samples.model.Medicamento;
 import edu.eci.cosw.samples.model.MedicamentoPorProveedor;
+import edu.eci.cosw.samples.model.Mensajero;
+import edu.eci.cosw.samples.model.OrdenCompra;
 import edu.eci.cosw.samples.model.Paciente;
 import edu.eci.cosw.samples.model.Pedido;
+import edu.eci.cosw.samples.model.Proveedor;
 import edu.eci.cosw.samples.persistencia.AutorizacionRepository;
+import edu.eci.cosw.samples.persistencia.CotizacionesRepository;
 import edu.eci.cosw.samples.persistencia.DetalleOrdenConprRepository;
+import edu.eci.cosw.samples.persistencia.DetallesInventarioRepository;
+import edu.eci.cosw.samples.persistencia.DetallesOrdenesCompraRepository;
 import edu.eci.cosw.samples.persistencia.EpsafilidaRepository;
+import edu.eci.cosw.samples.persistencia.InventarioRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoPPRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoRepository;
+import edu.eci.cosw.samples.persistencia.MensajeroRepository;
+import edu.eci.cosw.samples.persistencia.OrdenesCompraRepository;
 import edu.eci.cosw.samples.persistencia.PacientesRepository;
 import edu.eci.cosw.samples.persistencia.PedidosRepository;
+import edu.eci.cosw.samples.persistencia.ProveedoresRepository;
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +67,22 @@ public class Clase {
     
     @Autowired
     AutorizacionRepository ar;
+    
+    @Autowired
+    MensajeroRepository menr;
+    
+    @Autowired
+    DetallesInventarioRepository dir;
+    @Autowired
+    CotizacionesRepository cr;
+    @Autowired
+    ProveedoresRepository prr;
+    @Autowired
+    OrdenesCompraRepository ocr;
+    @Autowired
+    DetallesOrdenesCompraRepository docr;
+    @Autowired
+    InventarioRepository invr;
     
     
     public DetalleOrdenCompra consultarOrden (int id) {
@@ -150,4 +181,106 @@ public class Clase {
     public List<Autorizacion> ConsultarAutorizacionPaciente(int id){
         return ar.AutorizacionPorPaciente(id);
     }
+    /*========================================================================
+                              ORDEN DE COMPRA
+    ========================================================================*/
+    public Mensajero consultarEmpleado(int id) {
+        Mensajero p=menr.findOne(id);
+        return p;
+    }
+    
+    public Iterable<Mensajero> consultarEmpleados() {
+        Iterable<Mensajero> p = menr.findAll();
+        return p;
+    }
+    
+     
+    public Iterable<DetalleInventario> consultarDetalleInventario() {
+        Iterable<DetalleInventario> di = dir.findAll();
+        return di;
+    }
+    
+     public Iterable<DetalleInventario> cargarDetalleInventarioPorCantidad(int cantidad)
+     {
+     Iterable<DetalleInventario> di = dir.detallesInventarioPorCantidad(cantidad);
+        return di;
+     }
+    
+    public void addNewCotizacion(Cotizacion c) {
+        cr.save(c);
+    }
+    
+     public Iterable<Cotizacion> consultarCotizaciones() {
+        Iterable<Cotizacion> ctz = cr.findAll();
+        return ctz;
+    }
+    
+     public Iterable<Proveedor> consultarProveedores() {
+        Iterable<Proveedor> prs = prr.findAll();
+        return prs;
+    }
+     
+     public Proveedor consultarProveedorPOrId(int id) {
+        Proveedor p=prr.findOne(id);
+        return p;
+    }
+     public Cotizacion consultarCotizacionPorId(int id) {
+        Cotizacion c=cr.findOne(id);
+        return c;
+    }
+     
+     public Iterable<OrdenCompra> consultarOrdenesCompra() { 
+         Iterable<OrdenCompra> oc = ocr.findAll();
+        return oc;
+    }
+     
+     public OrdenCompra consultarOrdenCompraPorId(int id) {
+        OrdenCompra o=ocr.findOne(id);
+        return o;
+    }
+     
+     public Iterable<DetalleOrdenCompra> consultarDetalleOrdenCompra() {
+        Iterable<DetalleOrdenCompra> oc = docr.findAll();
+        return oc;
+    }
+     
+     public DetalleOrdenCompra consultarDetalleOrdenCompraPorId(int id) {
+        DetalleOrdenCompra p=docr.findOne(id);
+        return p;
+    }
+      public void addNewOrdenCompra(OrdenCompra o) {
+        ocr.save(o);
+    }
+      
+      public Iterable<Inventario> consultarInventarios() {
+        Iterable<Inventario> oc = invr.findAll();
+        return oc;
+    }
+     
+     public Inventario consultarInventarioPorId(int id) {
+        Inventario p=invr.findOne(id);
+        return p;
+    }
+     
+     public OrdenCompra CrearOrdenDeCompra(Date fecha)
+     {
+        OrdenCompra o= new OrdenCompra(fecha);
+         ocr.save(o);
+         return o;
+    }
+      public DetalleOrdenCompra CrearDetalleOrdenDeCompra(MedicamentoPorProveedor medicamentosPorProveedor, OrdenCompra ordenesCompra)
+     {
+        DetalleOrdenCompra doc= new DetalleOrdenCompra(medicamentosPorProveedor,ordenesCompra);
+        docr.save(doc);
+        return doc;
+    }
+      
+      public void AdicionarDetallesAOrden(OrdenCompra oc, Set<DetalleOrdenCompra> dt)
+     {
+        oc.setDetallesOrdenesCompras(dt);
+        ocr.save(oc); 
+    }
+    
+    
+    
 }

@@ -71,13 +71,13 @@
                         <a href="#doctors"><i class="fa fa-users fa-lg"></i> Consultar Despacho</a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#services"><i class="fa fa-signal fa-lg"></i> Services</a>
+                        <a href="#services"><i class="fa fa-signal fa-lg"></i> Empleado</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#gallery"><i class="fa fa-briefcase"></i> gallery</a>
+                        <a href="#gallery"><i class="fa fa-briefcase"></i> Orden De Compra</a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+                        <a href="#contact"><i class="fa fa-envelope"></i> Recepcion</a>
                     </li>
 					
                 </ul>
@@ -433,7 +433,7 @@
 							<hr/><hr/><hr/><hr/><hr/>
 						</div>
 						<span class="inline-icon heading-width">
-							<span class="heading-text">Services</span>
+							<span class="heading-text">Empleado</span>
 						</span>
 						<div class="inline-icon">
 							<hr/><hr/><hr/><hr/><hr/>
@@ -441,89 +441,37 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 left-services">
-						<div class="service-item animateleft">
-							<span class="fa-stack fa-3x right">
-							    <i class="fa fa-circle fa-2x fa-stack-2x"></i>
-							    <i class="fa fa-user-md fa-stack-1x fa-inverse service-icon"></i>
-							</span>
-							<h3>
-								Oral Hygienist
-							</h3>
-							<p class="white">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis metus vitae ligula elementum ut luctus lorem facilisis.
-							</p>
-						</div>
-						<div class="service-item animateleft">
-							<span class="fa-stack fa-3x right">
-							    <i class="fa fa-circle fa-2x fa-stack-2x"></i>
-							    <i class="fa fa-ambulance fa-stack-1x fa-inverse service-icon"></i>
-							</span>
-							<h3>
-								Laboratory Test
-							</h3>
-							<p class="white">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis metus vitae ligula elementum ut luctus lorem facilisis.
-							</p>
-						</div>
-						<div class="service-item animateleft">
-							<span class="fa-stack fa-3x right">
-							    <i class="fa fa-circle fa-2x fa-stack-2x"></i>
-							    <i class="fa fa-stethoscope fa-stack-1x fa-inverse service-icon"></i>
-							</span>
-							<h3>
-								ECG Tests
-							</h3>
-							<p class="white">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis metus vitae ligula elementum ut luctus lorem facilisis.
-							</p>
-						</div>
-					</div>
-					<div class="col-md-6 right-services">
-						<div class="service-item animateright">
-							<span class="fa-stack fa-3x right">
-							    <i class="fa fa-circle fa-2x fa-stack-2x"></i>
-							    <i class="fa fa-hospital-o fa-stack-1x fa-inverse service-icon"></i>
-							</span>
-							<h3>
-								ARYTHMIA Treatment
-							</h3>
-							<p class="white">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis metus vitae ligula elementum ut luctus lorem facilisis.
-							</p>
-						</div>
-						<div class="service-item animateright">
-							<span class="fa-stack fa-3x right">
-							    <i class="fa fa-circle fa-2x fa-stack-2x"></i>
-							    <i class="fa fa-wheelchair fa-stack-1x fa-inverse service-icon"></i>
-							</span>
-							<h3>
-								PHYSICAL EXAMINATION
-							</h3>
-							<p class="white">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis metus vitae ligula elementum ut luctus lorem facilisis.
-							</p>
-						</div>
-						<div class="service-item animateright">
-							<span class="fa-stack fa-3x right">
-							    <i class="fa fa-circle fa-2x fa-stack-2x"></i>
-							    <i class="fa fa-medkit fa-stack-1x fa-inverse service-icon"></i>
-							</span>
-							<h3>
-								Diet Organisation
-							</h3>
-							<p class="white">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis metus vitae ligula elementum ut luctus lorem facilisis.
-							</p>
-						</div>
-					</div>
-				</div>
+                            <div class="col-lg-12">
+                                
+                                 <div align="center">
+                                     <h3>Ingrese Cedula Empleado</h3>
+                                        <input style="background-color:teal" type="text" ng-model="empleado" size="10" />
+
+                                        <br><br>
+                                        <button class="btn btn-primary filter active" ng-click="loginEmpleado()">Entrar</button>
+
+                                        <br><br>
+                                        Empleado: {{empleado.nombre}}
+                                        
+                                        
+                                    </div>
+                                
+
+                                <div class="text-center">
+                                    <div class="page-scroll menu-icon">
+                                        <a href="#services">
+                                            <i class="fa fa-angle-down fa-lg fa-border"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 			</div>
 		</div>
 	</section>
 	 
 	<section class="grey-area milestones">
-		<h2 class="main_heading animatezoomin">Achievements</h2>
+		<h2 class="main_heading animatezoomin">Empleados</h2>
 		
 			<div class="gap-50"></div>
 			<div class="container countup">
@@ -572,159 +520,88 @@
 							<hr/><hr/><hr/><hr/><hr/>
 						</div>
 						<span class="inline-icon heading-width">
-							<span class="heading-text">gallery</span>
+							<span class="heading-text">Orden Compra</span>
 						</span>
 						<div class="inline-icon">
 							<hr/><hr/><hr/><hr/><hr/>
 						</div>
 					</div>
 				</div>
-				<div class="gap-30"></div>
 				
-				<div id="filters" class="filter_group text-center">  
-					<button class="btn btn-primary filter active" data-filter="*">show all</button>
-					<button class="btn btn-primary filter" data-filter=".doctorgallary">Doctors</button>
-					<button class="btn btn-primary filter" data-filter=".laboratory">Laboratory</button>
-					<button class="btn btn-primary filter" data-filter=".surgery">Outpatient Surgery</button>
-				</div>
-				<div class="isotope gallery-container">
-					<div class="element-item gallery-item doctorgallary">
-						<a href="#galleryModal1" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_01.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									TREATMENT
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item laboratory">
-						<a href="#galleryModal2" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_02.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									SATISTFIED PATIENTS
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item doctorgallary">
-						<a href="#galleryModal3" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_03.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									SENIOUR STAFF
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item surgery">
-						<a href="#galleryModal4" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_04.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									CLINICAL EXPERTIES
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item laboratory">
-						<a href="#galleryModal5" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_05.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									Child Care
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item surgery">
-						<a href="#galleryModal6" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_06.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									SATISFIED PATIENTS
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item doctorgallary">
-						<a href="#galleryModal7" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_07.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									PRESSURE GUIDELINES
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item surgery">
-						<a href="#galleryModal8" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_08.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									DENTAL TREATMENT
-								</h4>
-							</div>
-						</a>
-					</div>
-					<div class="element-item gallery-item laboratory">
-						<a href="#galleryModal9" class="gallery-link" data-toggle="modal">
-							<div class="caption">
-								<div class="caption-content">
-									<i class="fa fa-search-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="img/gallery/small_photo_09.jpg" class="img-responsive" alt="" />
-							<div class="carousel-caption">
-								<h4>
-									SPRINGTIME ALLERGIES
-								</h4>
-							</div>
-						</a>
-					</div>
-				  
-				</div>
+                           
+                            
+                            <div class="row" >
+                            
+                            <h3>Consulta</h3>
+                            <p>!!!Para poder consultar debe autenticarse como empleado!!!</p>
+                                <p>Consulte los medicamentos segun el numero de unidades en el inventario</p>
+                                
+                                        
+                                        <p>Seleccione las unidades   
+                                            <select ng-model="selectedValue" ng-options="val for val in getNumeroUnidades()">
+                                                <option value="">Unidades</option>
+                                            </select>
+                                            
+                                        </p>
+                                          
+                                       
+                                        <button ng-if="autenticar!==-1" class="btn btn-primary filter active" ng-click="cargarDetalleInventarioPorCantidad()">Buscar</button> 
+                                        <br><br>
+                                        
+                                         <h3>Seleccion</h3>
+                                        <p>Seleccione los medicamentos que desea comprar</p>
+                                        
+                                        <table border="2px"  class="table table-striped">
+                                            <thead>
+                                <tr>
+                                   <th> Id Medicamento </th>
+                                   <th> Nombre </th>
+                                    <th> Cantidad Actual</th>    
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in detallesInventario" ng-click="setSelectedMedicamentoCotizar(x.medicamentosPorProveedor.medicamentos.idMedicamentos)" >
+                                    <!--ng-if="prod.epsafilidas.idEps==3 && prod.estado=='aprobado'" -->
+                                    <td scope="col"> {{x.medicamentosPorProveedor.medicamentos.idMedicamentos}}</td>
+                                    <td scope="col"> {{x.medicamentosPorProveedor.medicamentos.nombre}}</td>
+                                    <td scope="col"> {{x.cantidad}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                                        <button center-align class="btn btn-primary filter active" value="OK" ng-click="addToSelectedMedicamentosCotizar()">Seleccionar</button>
+                                        <br><br>
+                                    <h3>Productos Seleccionados</h3>
+                        <p> Productos  seleccionados a comprar:</p>
+                    <table border="2px"  class="table table-striped">
+                        <thead>
+                            <tr>
+                                 <th>IdMedicamento</th>
+                                <th>Medicamento</th>
+                                <th>Descripcion</th>                            
+                            </tr>
+                        </thead>
+                      
+                        <tbody>
+                            <tr ng-repeat="prod in selectedMedicamentosCotizar"  >
+                                <td>{{ prod.idMedicamentos}}</td>
+                                <td>{{ prod.nombre}}</td>
+                                <td>{{ prod.descripcion}}</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                        <p>Seleccione el numero de unidades a Comprar</p>
+                                        <p>
+                                            <select ng-model="selectedValueUnidades" ng-options="val for val in getNumeroUnidadesAComprar()">
+                                                <option value="">Unidades A Comprar</option>
+                                            </select>
+                        </p>
+                    <p>Numero de unidades seleccionadas: {{selectedValueUnidades}}</p>
+                    <button center-align class="btn btn-primary filter active" value="OK" ng-click="crearOrdenCompra()">Generar Orden De comprar</button>
+                       </div>  
+                            
+                            
+				
 			</div>
 		</div>
     </section>

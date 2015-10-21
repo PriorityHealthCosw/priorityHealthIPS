@@ -10,7 +10,7 @@
                 }).error(function(){
                     alert("NOOOOO");
                 });
-            }; 
+        }; 
         
        this.pacientesRequestPromise = function () {            
             return $http({
@@ -129,6 +129,93 @@
          this.getConsultarMedicamento = function(){
             return $http.get('http://localhost:8080/intento1/rest/medicamentos/');
         };
+        
+        //////////////////////////////////////////////////////////////////////////
+        this.mensajerosRequestPromise = function () {            
+            return $http({
+                method: 'GET',
+                url: 'rest/mensajeros'
+            });            
+        };
+        
+        this.mensajerosByIdRequestPromise = function (id) {            
+            return $http({
+                method: 'GET',
+                url: 'rest/mensajeros/'+id
+            });            
+        };
+        ///////////////////////////////////////////////////////////////////
+          this.posCotizar =function(medicamento,proveedor,cantidad,precio){
+           
+             $http.post('rest/cotizaciones' , {"medicamentos":medicamento,"proveedores":proveedor,"cantidad":cantidad,"precio":precio}).
+                        success(function(){
+                                      alert('Cotizacion Realizada');
+                }).error(function(){
+                    alert("NOOOOO");
+                });
+            };
+            
+            this.posDetalleOrdenCompra =function(medicamentosPorProveedor,ordenesCompra,cantidad){
+           
+             $http.post('rest/detallesOrdenesCompra' , {"medicamentosPorProveedor":medicamentosPorProveedor,"ordenesCompra":ordenesCompra,"cantidad":cantidad}).
+                        success(function(){
+                                      alert('DetalleOrdenDeCompra Realizada');
+                }).error(function(){
+                    alert("Detalle Orden Compra fallida");
+                });
+            };
+            
+             this.posGenerarOrdenCompra =function(){
+           
+             $http.post('rest/ordenesCompra' , {"fecha":"2015-10-23"}).
+                        success(function(){
+                                      alert('Orden De Compra Realizada exitosamente');
+                }).error(function(){
+                    alert("Orden Compra fallida");
+                });
+            };
+            
+          this.ordenCompraByIdRequestPromise = function (idOrdenesCompra) {            
+            return $http({
+                method: 'GET',
+                url: 'rest/ordenesCompra/'+idOrdenesCompra
+            });            
+        };
+        
+        this.ordenCompraRequestPromise = function () {            
+            return $http({
+                method: 'GET',
+                url: 'rest/ordenesCompra/'
+            });            
+        };
+        
+        this.proveedoresRequestPromise = function () {            
+            return $http({
+                method: 'GET',
+                url: 'rest/proveedores'
+            });            
+        };
+        
+        this.pacienteByIdRequestPromise = function (idped) {            
+            return $http({
+                method: 'GET',
+                url: 'rest/pacientes/'+idped
+            });            
+        };
+        
+        this.detalleIByCantidadPromise = function (cantidad) {            
+            return $http({
+                method: 'GET',
+                url: 'rest/detalleInventario/'+cantidad
+            });            
+        };
+        
+        
+        
+        
+        
+        
+        
     }
     );
 

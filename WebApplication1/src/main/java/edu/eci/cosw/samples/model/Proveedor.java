@@ -37,6 +37,17 @@ public class Proveedor  implements java.io.Serializable {
     public Proveedor(int idProveedores) {
         this.idProveedores = idProveedores;
     }
+    
+    public Proveedor(int idProveedores, String nombre, Integer telefono, String direccion, String pais) {
+       this.idProveedores = idProveedores;
+       this.nombre = nombre;
+       this.telefono = telefono;
+       this.direccion = direccion;
+       this.pais = pais;
+      
+    }
+    
+    
     public Proveedor(int idProveedores, String nombre, Integer telefono, String direccion, String pais, Set<Cotizacion> cotizacioneses, Set<Factura> facturases, Set<MedicamentoPorProveedor> medicamentosPorProveedors) {
        this.idProveedores = idProveedores;
        this.nombre = nombre;
