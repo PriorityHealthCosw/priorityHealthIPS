@@ -3,14 +3,15 @@
 
     app.service('IPSRestAPI', function ($http) {
         
-        this.pos =function(paciente){
+         this.pos =function(paciente,total){
                 $http.post('rest/pedidos' , {"pacientes":paciente,"fechaLlegada":"2015-03-03","direccion":"Cra 18 # 5-15"}).
                         success(function(){
-                                      alert('Felicidades,su pedido fue creado exitosamente');
+                                      alert('Felicidades'+paciente.nombre+' su pedido fue creado exitosamente y tiene un costo de'+total);
                 }).error(function(){
                     alert("NOOOOO");
                 });
         }; 
+        
         
        this.pacientesRequestPromise = function () {            
             return $http({
@@ -58,7 +59,7 @@
         this.medicamentosRequestPromise = function () {            
             return $http({
                 method: 'GET',
-                url: 'rest/medicamentos'
+                url: 'rest/medicamentospp'
             });            
         };
         

@@ -35,11 +35,15 @@
             };
          $scope.crearPedido = function () {
             
-            IPSRestAPI.pos($scope.paciente);
+            IPSRestAPI.pos($scope.paciente,$scope.total);
             console.log('Shopping kart updated' + JSON.stringify($scope.selectedMedicamentos));
+            
          };
-        
         $scope.medicamentos = [];
+                
+        $scope.totala = 0;
+        
+        $scope.total = 0;
 
         $scope.selectedMedicamentos = MedicamentosSelectionFactory.getData();
 
@@ -71,9 +75,11 @@
                     }
             );
 
-            $scope.setSelectedMedicamento = function (idpac) {
+            $scope.setSelectedMedicamento = function (idpac,precio) {
                 $scope.selectedMedicamentoId = idpac;
-
+                $scope.totala=precio;
+                console.log('Cuantos precios tiene'+precio);
+                
 
                 IPSRestAPI.medicamentoByIdRequestPromise(idpac).then(
                     //promise success
@@ -86,6 +92,8 @@
                             $scope.selectedMedicamentoId=-1;
                             alert('DEBE APROBAR');
                             
+                        }else{
+                            $scope.total=$scope.totala+$scope.total;
                         }
                     },
                     //promise error
