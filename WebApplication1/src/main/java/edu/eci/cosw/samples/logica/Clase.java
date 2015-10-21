@@ -268,7 +268,7 @@ public class Clase {
     }
      
      public DetalleOrdenCompra consultarDetalleOrdenCompraPorId(int id) {
-        DetalleOrdenCompra p=docr.findOne(id);
+        DetalleOrdenCompra  p = docr.findOne(id);
         return p;
     }
       public void addNewOrdenCompra(OrdenCompra o) {
@@ -304,6 +304,10 @@ public class Clase {
         ocr.save(oc); 
     }
     
+      
+       public List<DetalleOrdenCompra> ConsultarDetalleOrdenCompraLi(int id){
+        return docr.DetalleOrdenCompraId(id);
+    }
     
     
 }

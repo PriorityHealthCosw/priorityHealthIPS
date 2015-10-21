@@ -623,7 +623,7 @@
                      <br>
                     <div class="form-group col-xs-12">
                        <!--button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar Todas</button-->
-                       <button type="submit" class="btn btn-primary" ng-click="ConsultarPedido()">Consultar</button>
+                       <button type="submit" class="btn btn-primary" ng-click="traerDetalleInventario()">Consultar</button>
                     </div>
             
             <table style="background-color:darkgray" class="table table-condensed table-bordered table-striped">
@@ -637,7 +637,7 @@
                     </tr>                
                 </thead>
                 <tbody>
-                    <tr ng-repeat="con in paciente">
+                    <tr style="background-color:darkgray" ng-repeat="con in pedido">
                         <td>
                             {{con.idDetallesOrdenesCompra}}
                         </td>

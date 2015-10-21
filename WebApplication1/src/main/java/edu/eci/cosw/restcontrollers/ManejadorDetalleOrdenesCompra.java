@@ -38,7 +38,10 @@ public class ManejadorDetalleOrdenesCompra {
         DetalleOrdenCompra cat = c.consultarDetalleOrdenCompraPorId(id);
         return cat;
     } 
-    
-    
-    
+   /* 
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    public List<DetalleOrdenCompra> ConsultarOrdenLi(@PathVariable int id)throws OperationFailedException{
+        return c.ConsultarDetalleOrdenCompraLi(id);
+    }
+    */
 }

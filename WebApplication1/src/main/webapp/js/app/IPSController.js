@@ -132,10 +132,10 @@
         } );
         };
      
-        $scope.ConsultarPedido=function(){
+        $scope.traerDetalleInventario=function(){
             
             $scope.pedido= IPSRestAPI.getDetalleOrdenCompra($scope.idordenCompra).success(function(data){
-                $scope.pedido=data;
+                $scope.pedido= data;
             });
             
         };

@@ -25,6 +25,9 @@ public interface DetallesOrdenesCompraRepository extends CrudRepository<DetalleO
 @Query("from DetalleOrdenCompra doc where doc.idDetallesOrdenesCompra= :idDetallesOrdenesCompra  ")
     public DetalleOrdenCompra DetalleOrdenCompraPorId(@Param("idDetallesOrdenesCompra") int idDetallesOrdenesCompra);
 
+    @Query("from DetalleOrdenCompra doc where doc.idDetallesOrdenesCompra= :idDetallesOrdenesCompra  ")
+    public List<DetalleOrdenCompra> DetalleOrdenCompraId(@Param("idDetallesOrdenesCompra")int idDetallesOrdenesCompra);
+
 }
 
 
