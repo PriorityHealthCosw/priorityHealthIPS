@@ -118,9 +118,16 @@
             return $http.get('http://localhost:8080/intento1/rest/detallesOrdenesCompra/'+id);
         };
         
+        
+          
         this.getAutorizacionByPaciente = function(id){
-            return $http.get('http://localhost:8080/intento1/rest/autorizaciones/'+id);
-        }; 
+            
+            return $http({
+                
+              method : 'GET',
+              url: 'rest/autorizaciones/'+id
+            });
+        };
         
         this.getConsultarAutorizacion = function(){
             return $http.get('http://localhost:8080/intento1/rest/autorizaciones/');
@@ -133,11 +140,15 @@
         this.getConsultarDespacho= function(){
             return $http.get('http://localhost:8080/intento1/rest/despachos/');
         };
-        
-        
-       this.getDespachoByPaciente = function(id){
-            return $http.get('http://localhost:8080/intento1/rest/despachos/'+id);
-        }; 
+    
+        this.getDespachoByPaciente = function(id){
+            
+            return $http({
+                
+              method : 'GET',
+              url: 'rest/despachos/'+id
+            });
+        };
         
         
         //////////////////////////////////////////////////////////////////////////
