@@ -304,10 +304,6 @@ public class Clase {
         ocr.save(oc); 
     }
     
-      
-       public List<DetalleOrdenCompra> ConsultarDetalleOrdenCompraLi(int id){
-        return docr.DetalleOrdenCompraId(id);
-    }
-    
+
     
 }

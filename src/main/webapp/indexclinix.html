@@ -639,19 +639,19 @@
                     </tr>                
                 </thead>
                 <tbody>
-                    <tr style="background-color:darkgray" ng-repeat="con in pedido">
-                        <td>
-                            {{con.idDetallesOrdenesCompra}}
+                    <tr ng- ng-repeat="con in pedido">
+                        <td style="background-color:teal">
+                            {{pedido.idDetallesOrdenesCompra}}
                         </td>
-                         <td>
-                            {{con.idOrdenesCompra}}
+                         <td style="background-color:teal">
+                            {{pedido.idOrdenesCompra}}
                         </td>
-                        <td>
-                            {{con.idMedicamentosProveedor}}
+                        <td style="background-color:teal">
+                            {{pedido.idMedicamentosProveedor}}
                         </td>
-                        <td>
-                            {{con.cantidad}}
-                        </td>
+                        <td style="background-color:teal">
+                            {{pedido.cantidad}}
+                        </td >
                         
                     </tr>                 
                 </tbody>
