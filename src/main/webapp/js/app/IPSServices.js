@@ -232,6 +232,15 @@
             });            
         };
         
+        this.medicamentoAumento =function(medicamentosPorProveedor,cantidad){
+           
+             $http.post('rest/detalleInventario' , {"medicamentosPorProveedor":medicamentosPorProveedor,"cantidad":cantidad, "idInventario":1}).
+                        success(function(){
+                                      alert('DetalleInventario Realizada');
+                }).error(function(){
+                    alert("Detalle inventario fallida");
+                });
+            };
         
         
         

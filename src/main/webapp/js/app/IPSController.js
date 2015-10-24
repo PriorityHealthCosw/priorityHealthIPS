@@ -10,6 +10,7 @@
         $scope.selectedPacienteId = -1;
         $scope.pedido;
         $scope.idordenCompra;
+     
        
 
   
@@ -147,6 +148,15 @@
             });
             
         };
+        
+         $scope.idmedicamentopp;
+         $scope.tomado =0;
+   
+    
+        $scope.medicamentomas=function(){
+        
+        IPSRestAPI.medicamentoAumento($scope.idmedicamentopp,$scope.cantidad+$scope.tomado);
+    }
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////Login empleado/////////////////////////////////////////////////////
@@ -319,7 +329,9 @@
                                     }
                                 };
                             });
+   
     
+
     
 
 })();
