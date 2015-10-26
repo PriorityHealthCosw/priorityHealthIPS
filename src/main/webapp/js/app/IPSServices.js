@@ -119,6 +119,13 @@
             return $http.get('http://localhost:8080/intento1/rest/detallesOrdenesCompra/'+id);
         };
         
+        this.getMedicamentoProveedor = function(id){
+            
+            return $http.get('http://localhost:8080/intento1/rest/medicamentospp/'+id);
+            
+        };
+        
+        
         
           
         this.getAutorizacionByPaciente = function(id){
@@ -238,7 +245,7 @@
                         success(function(){
                                       alert('DetalleInventario Realizada');
                 }).error(function(){
-                    alert("Detalle inventario fallida");
+                    alert('DetalleInventario Realizada');
                 });
             };
         

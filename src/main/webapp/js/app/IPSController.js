@@ -10,6 +10,9 @@
         $scope.selectedPacienteId = -1;
         $scope.pedido;
         $scope.idordenCompra;
+        $scope.proveedor1;
+        $scope.idmedicpp;
+        $scope.tomado;
      
        
 
@@ -133,6 +136,17 @@
             $scope.consulDes = data;
         } );
         };
+        
+        $scope.getMedProd= function(){
+            
+            $scope.medi = IPSRestAPI.getMedicamentoProveedor($scope.idmedicpp).success(function(data){
+                $scope.medi= data;
+                
+                
+                
+            });
+            
+        };
               
         
         $scope.getMedicamentos = function (){
@@ -149,14 +163,14 @@
             
         };
         
-         $scope.idmedicamentopp;
-         $scope.tomado =0;
+        
+        
    
     
         $scope.medicamentomas=function(){
         
-        IPSRestAPI.medicamentoAumento($scope.idmedicamentopp,$scope.cantidad+$scope.tomado);
-    }
+        IPSRestAPI.medicamentoAumento($scope.medi,$scope.tomado);
+    };
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////Login empleado/////////////////////////////////////////////////////
